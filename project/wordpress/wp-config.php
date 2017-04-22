@@ -2,6 +2,24 @@
 // File 
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Define environment constant
+define('WP_ENV', __DIR__ == '/var/project/wordpress' ? 'DEV' : 'PROD');
+
+// Load configuration
+$config = require_once('config/dev.php');
+
+if (WP_ENV == 'PROD') {
+    $config = array_merge($config, require_once('config/prod.php'));
+}
+
+// URLs
+define('WP_HOME', $config['WP_HOME']);
+define('WP_SITEURL', WP_HOME . '/wp');
+
+// Custom Content Directory
+define('WP_CONTENT_DIR', __DIR__ . '/app');
+define('WP_CONTENT_URL', WP_HOME . '/app');
+
 // DB conection
 define('DB_NAME',     'dbname');
 define('DB_USER',     'dbuser');
@@ -9,9 +27,6 @@ define('DB_PASSWORD', '123');
 define('DB_HOST',     '127.0.0.1');
 define('DB_CHARSET',  'utf8');
 define('DB_COLLATE',  '');
-
-// Custom content dir
-define('WP_CONTENT_DIR', __DIR__ . '/app');
 
 // Authentication unique keys and salts
 define('AUTH_KEY',         '9fee305f2d0c7cd194cda2345598e39230af751bed80d28edc5cd0824605b89b');
