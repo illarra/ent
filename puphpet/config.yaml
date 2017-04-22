@@ -134,13 +134,13 @@ nginx:
             server_name: apostrof-wordpress.dev
             server_aliases:
                 - www.apostrof-wordpress.dev
-            www_root: /var/project
+            www_root: /var/project/wordpress
             listen_port: '80'
             client_max_body_size: 1m
             ssl: '0'
             locations:
                 nxvl_4cembp47zgck:
-                    www_root: /var/project
+                    www_root: /var/project/wordpress
                     location: /
                     autoindex: 'off'
                     internal: 'false'
@@ -154,7 +154,7 @@ nginx:
                     proxy: ''
                     proxy_redirect: ''
                 nxvl_timhhstj08fn:
-                    www_root: /var/project
+                    www_root: /var/project/wordpress
                     location: '~ \.php$'
                     autoindex: 'off'
                     internal: 'false'

@@ -1,1 +1,15 @@
+# Vagrant/PuPHPet
 .vagrant
+
+# App (wp-content)
+project/wordpress/app/plugins/*
+!project/wordpress/app/plugins/.gitkeep
+project/wordpress/app/mu-plugins/*
+!project/wordpress/app/mu-plugins/.gitkeep
+project/wordpress/app/upgrade
+
+# Wordpress
+project/wordpress/wp
+
+# Composer
+project/wordpress/vendor/*
