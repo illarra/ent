@@ -2,14 +2,20 @@
 .vagrant
 
 # App (wp-content)
-project/wordpress/app/plugins/*
-!project/wordpress/app/plugins/.gitkeep
 project/wordpress/app/mu-plugins/*
 !project/wordpress/app/mu-plugins/.gitkeep
+
+project/wordpress/app/plugins/*
+!project/wordpress/app/plugins/js_composer
+!project/wordpress/app/plugins/sitepress-multilingual-cms
+!project/wordpress/app/plugins/wpml-media
+
 project/wordpress/app/upgrade
+project/wordpress/app/uploads/cache
 
 # Wordpress
 project/wordpress/wp
+project/wordpress/wp/wp-snapshots
 
 # Composer
 project/wordpress/vendor/*

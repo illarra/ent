@@ -21,14 +21,22 @@
   "require": {
     "php": ">=5.6",
     "composer/installers": "~1.2.0",
-    "johnpbloch/wordpress": "4.7.4"
+    "johnpbloch/wordpress": "4.7.4",
+    "roots/soil": "3.x",
+    "timber/timber": "1.2.x",
+    "wpackagist-plugin/carbon-fields": "1.5.x",
+    "wpackagist-plugin/duplicator": "1.2.x"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
   },
   "extra": {
     "installer-paths": {
-      "app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "roots/soil",
+        "wpackagist-plugin/carbon-fields"
+      ],
       "app/plugins/{$name}/": ["type:wordpress-plugin"],
       "app/themes/{$name}/": ["type:wordpress-theme"]
     },
