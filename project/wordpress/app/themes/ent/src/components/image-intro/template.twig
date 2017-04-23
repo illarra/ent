@@ -1,0 +1,33 @@
+{% if color != 'azul' %}
+    {% set class = 'image-intro--'~color %}
+    {% set image_width = '6' %}
+    {% set content_width = '6' %}
+{% else %}
+    {% set class = '' %}
+    {% set image_width = '8' %}
+    {% set content_width = '4' %}
+{% endif %}
+<section class="image-intro {{ class }}">
+    <div class="row">
+        <div class="small-12 medium-{{ image_width }} columns align-middle show-for-large">
+            {% if video_link %}
+                <a data-mu-media-popup class="mfp-iframe image-intro__play" href="{{ video_link }}">
+            {% endif %}
+
+            <img class="image-intro__image" src="{{ image|resize(800) }}" />
+
+            {% if video_link %}
+                </a>
+            {% endif %}
+        </div>
+        <div class="small-12 large-{{ content_width }} columns">
+            <div class="image-intro__content">
+                <div class="image-intro__content-image hide-for-large">
+                    <img src="{{ image|resize(300) }}" />
+                </div>
+                {{ content|wpautop }}
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -30,6 +30,11 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
   },
+  "autoload": {
+    "psr-4": {
+      "Ent\\": ["app/themes/ent/ent"]
+    }
+  },
   "extra": {
     "installer-paths": {
       "app/mu-plugins/{$name}/": [

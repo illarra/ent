@@ -1,1 +1,2 @@
-Here be dragons
+<?php
+Ent::handle_request();
