@@ -47,7 +47,7 @@ class ComponentsLoader {
 
     public function load_components($folder) {
         foreach (glob($folder .'/*') as $path) {
-            require_once $path .'/component.php';
+            require_once($path .'/component.php');
 
             $component = basename($path);
             $class = $this->get_component_class($component);

@@ -170,10 +170,10 @@ class VisualComposer {
     }
 
     public function standard_tweaks() {
-        require_once 'VisualComposer/standard/vc_column_inner.php';
-        require_once 'VisualComposer/standard/vc_column.php';
-        require_once 'VisualComposer/standard/vc_row_inner.php';
-        require_once 'VisualComposer/standard/vc_row.php';
+        require_once('VisualComposer/standard/vc_column_inner.php');
+        require_once('VisualComposer/standard/vc_column.php');
+        require_once('VisualComposer/standard/vc_row_inner.php');
+        require_once('VisualComposer/standard/vc_row.php');
     }
 
     // See: https://snippets.khromov.se/changing-settings-of-built-in-visual-composer-elements/
