@@ -3,5 +3,6 @@ read -r -p "This will override the database. Do you want to continue? [y/N] " re
 response=${response,,} # tolower
 
 if [[ "$response" =~ ^(yes|y)$ ]]; then
-    ./wp-cli db import db-dump.sql
+    wp db import /var/project/db-dump.sql --path=/var/project/wordpress/wp
 fi
+

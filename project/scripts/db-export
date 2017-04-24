@@ -1,3 +1,3 @@
 #!/bin/bash
 # See: https://github.com/wp-cli/wp-cli/issues/3873#issuecomment-283831149
-./wp-cli db dump db-dump.sql
+wp db dump /var/project/db-dump.sql --path=/var/project/wordpress/wp
