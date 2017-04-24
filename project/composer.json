@@ -10,7 +10,8 @@
     }
   ],
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "vendor-dir": "wordpress/vendor"
   },
   "repositories": [
     {
@@ -32,24 +33,24 @@
   },
   "autoload": {
     "psr-4": {
-      "Ent\\": ["app/themes/ent/ent"]
+      "Ent\\": ["wordpress/app/themes/ent/ent"]
     }
   },
   "extra": {
     "installer-paths": {
-      "app/mu-plugins/{$name}/": [
+      "wordpress/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
         "roots/soil",
         "wpackagist-plugin/carbon-fields"
       ],
-      "app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "app/themes/{$name}/": ["type:wordpress-theme"]
+      "wordpress/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "wordpress/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "wp"
+    "wordpress-install-dir": "wordpress/wp"
   },
   "scripts": {
     "test": [
-      "vendor/bin/phpcs"
+      "wordpress/vendor/bin/phpcs"
     ]
   }
 }
