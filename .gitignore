@@ -18,4 +18,7 @@ project/wordpress/wp
 project/wordpress/wp/wp-snapshots
 
 # Composer
-project/wordpress/vendor/*
+project/wordpress/vendor
+
+# Node.js
+project/node_modules

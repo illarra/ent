@@ -1,0 +1,86 @@
+
+.team-member {
+    @include mu-with-gutter-size(1, margin-bottom);
+}
+
+.team-member__image {
+    @include mu-with-gutter-size(1, margin-bottom);
+
+    // http://stackoverflow.com/a/19068538/379923
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: $light-gray;
+    background-size: cover;
+}
+
+.team-member__fullname, .team-collaborator__fullname {
+    font-family: $body-font-family;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: $primary-color;
+}
+
+.team-member__fullname {
+    @include mu-with-gutter-size(.5, margin-bottom);
+}
+
+.team-member__content {
+    p {
+        font-size: rem-calc(16);
+        line-height: 1.25em;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.team-member__social {
+    font-size: 1.2rem;
+}
+
+.team-collaborators {
+    @include mu-with-gutter-size(1, padding-top, padding-bottom);
+}
+
+.team-collaborator {
+    @include mu-with-gutter-size(.5, margin-bottom, padding-bottom);
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 175px;
+        background-color: $medium-gray;
+        bottom: 5px;
+    }
+}
+
+.team-collaborator:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    &:after {
+        display: none;
+    }
+}
+
+.team-collaborator__fullname {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.team-collaborator__content :last-child {
+    margin-bottom: 0;
+}
+
+.team-collaborator__social {
+    margin: 0;
+}
+
+.team-collaborators__image {
+    @include mu-with-gutter-size(1, margin-top, margin-bottom);
+}
