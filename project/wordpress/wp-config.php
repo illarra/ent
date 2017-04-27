@@ -1,7 +1,4 @@
 <?php
-// File 
-require_once(__DIR__ . '/vendor/autoload.php');
-
 // Define environment constant
 define('WP_ENV', __DIR__ == '/var/project/wordpress' ? 'DEV' : 'PROD');
 
@@ -11,6 +8,8 @@ $config = require_once('config/dev.php');
 if (WP_ENV == 'PROD') {
     $config = array_merge($config, require_once('config/prod.php'));
 }
+
+define('ROOT_DIR', __DIR__);
 
 // URLs
 define('WP_HOME', $config['WP_HOME']);
