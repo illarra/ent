@@ -55,6 +55,7 @@ alias grep='grep --color=auto -in'
 alias ..='cd ..'
 
 alias theme='cd /var/project/wordpress/app/themes/ent'
+alias proj='cd /var/project'
 alias project='cd /var/project'
 
 cd /var/project
