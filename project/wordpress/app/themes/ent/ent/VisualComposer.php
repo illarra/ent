@@ -11,14 +11,19 @@ class VisualComposer {
 
         $this->configure();
         $this->clean();
-        $this->admin_assets();
+        $this->configure_admin();
     }
 
     public function add_layout_component($component) {
         $this->layout_components[] = $component;
     }
 
-    protected function admin_assets() {
+    protected function configure_admin() {
+        // Remove help tips
+        add_action('vc_before_init', function () {
+            remove_action('admin_enqueue_scripts', 'vc_pointer_load');
+        });
+
         add_action('admin_enqueue_scripts', function () {
             wp_enqueue_script(
                 'ent-vc-backend',
@@ -53,11 +58,8 @@ class VisualComposer {
         vc_set_shortcodes_templates_dir(__DIR__ . '/VisualComposer/Standard/views');
         vc_disable_frontend();
 
+        // Enable VC for CPTs
         add_action('vc_before_init', function () {
-            // Remove help tips
-            remove_action('admin_enqueue_scripts', 'vc_pointer_load');
-
-            // Enable VC for CPTs
             vc_set_default_editor_post_types(Ent::vc()->get_enabled_cpts());
         });
 

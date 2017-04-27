@@ -1,0 +1,41 @@
+{% spaceless %}
+<!doctype html>
+<html {{ site.language_attributes }} class="no-js">
+<head>
+    <meta charset="{{ site.charset }}">
+    <title>
+        {% if wp_title %}
+            {{ wp_title }} - {{ site.name }}
+        {% else %}
+            {{ site.name }}
+        {% endif %}
+    </title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ asset('main.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="{{ site.pingback_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+    {#{{ function('carbon_get_theme_option', 'header_html') }}#}
+    {{ wp_head }}
+</head>
+<body class="{{ body_class }}">
+    {% block body %}{% endblock %}
+    <script src="{{ asset('vendors.js') }}"></script>
+    <script src="{{ asset('main.js') }}"></script>
+    <script>require('main.js');</script>
+    {{ wp_footer }}
+    {% if google_maps_api_key %}
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=onGoogleMapsLoaded"></script>
+        <script>
+            function onGoogleMapsLoaded() {
+                if (typeof initContactMap === "function") {
+                    initContactMap();
+                }
+            }
+        </script>
+    {% endif %}
+    {#{{ function('carbon_get_theme_option', 'body_html') }}#}
+</body>
+</html>
+{% endspaceless %}

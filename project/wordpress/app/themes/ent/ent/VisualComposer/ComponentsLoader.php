@@ -2,6 +2,8 @@
 namespace Ent\VisualComposer;
 
 class ComponentsLoader {
+    protected $vc;
+
     public function __construct($vc) {
         $this->vc = $vc;
     }

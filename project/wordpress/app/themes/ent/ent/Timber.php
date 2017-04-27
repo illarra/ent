@@ -52,11 +52,6 @@ class Timber {
 
             return $twig;
         });
-
-        // Tell Timber which CPT goes with which class
-        add_filter('Timber\PostClassMap', function () use ($config) {
-            return $config['post_class_map'];
-        });
     }
 
     public function get_context() {

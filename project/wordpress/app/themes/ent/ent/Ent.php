@@ -2,6 +2,10 @@
 namespace Ent;
 
 class Ent {
+    public static $cpt_loader;
+    public static $i18n;
+    public static $router;
+    public static $term_loader;
     public static $timber;
     public static $vc;
 
@@ -9,28 +13,44 @@ class Ent {
         // Create alias so that Ent class can be accessed typing `Ent::` without namespace backslash
         class_alias(get_class($this), 'Ent');
 
-        // Load CPT & Taxonomy definitions
-        foreach (['/src/post-types', '/src/taxonomies'] as $folder) {
-            foreach (glob($theme_dir . $folder .'/*.php') as $filename) {
-                require_once($filename);
-            }
-        }
+        self::init_timber($theme_dir, $config);
+        self::init_cpts_terms($theme_dir);
+        self::init_visualcomposer($theme_dir);
+        self::init_menus_sidebars($config);
+        self::init_i18n($theme_dir);
+        self::init_misc($config);
+        self::init_router();
+    }
 
-        // Init VisualComposer integration
-        self::$vc = new VisualComposer();
-        self::$vc->load_components(__DIR__ . '/VisualComposer/components');
-        self::$vc->load_components($theme_dir .'/src/components');
+    public static function handle_request() {
+        self::$router->handle_request();
+    }
 
-        // This must go after `load_components` so that $layout_components is populated for `vc_column`
-        self::$vc->standard_tweaks();
+    protected static function init_cpts_terms($theme_dir) {
+        self::$cpt_loader = new Loader\CPT();
+        self::$cpt_loader->load_folder($theme_dir . '/src/post-types');
 
-        // Init Timber/Twig
-        self::$timber = new Timber($theme_dir, $config);
+        self::$term_loader = new Loader\Term();
+        self::$term_loader->load_folder($theme_dir . '/src/taxonomies');
 
-        // Menus & Sidebars
+        // Pass Timber cpt => class map
+        $cpt_class_map = self::$cpt_loader->get_class_map();
+
+        add_filter('Timber\PostClassMap', function () use ($cpt_class_map) {
+            return $cpt_class_map;
+        });
+    }
+
+    protected static function init_i18n($theme_dir) {
+        self::$i18n = new i18n($theme_dir);
+    }
+
+    protected static function init_menus_sidebars($config) {
         new MenuManager($config['menus']);
         new SidebarManager($config['sidebars']);
+    }
 
+    protected static function init_misc($config) {
         // Timezone
         date_default_timezone_set($config['timezone']);
 
@@ -51,10 +71,26 @@ class Ent {
         });
     }
 
-    public static function handle_request() {
-        $context = \Timber::get_context();
-        $context['page'] = new \Timber\Post();
-        \Timber::render('index.twig', $context);
+    protected static function init_router() {
+        self::$router = new Router();
+    }
+
+    protected static function init_timber($theme_dir, $config) {
+        self::$timber = new Timber($theme_dir, $config);
+    }
+
+    protected static function init_visualcomposer($theme_dir) {
+        // Init VisualComposer integration
+        self::$vc = new VisualComposer();
+        self::$vc->load_components(__DIR__ . '/VisualComposer/components');
+        self::$vc->load_components($theme_dir .'/src/components');
+
+        // This must go after `load_components` so that $layout_components is populated for `vc_column`
+        self::$vc->standard_tweaks();
+    }
+
+    public static function router() {
+        return self::$router;
     }
 
     public static function timber() {

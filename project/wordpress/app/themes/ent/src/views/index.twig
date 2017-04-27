@@ -1,1 +1,10 @@
-{{ page.content }}
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="small-12 columns">
+            {{ page.hello }}<br>
+            {{ page.content }}
+        </div>
+    </div>
+{% endblock %}
