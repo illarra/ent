@@ -2,7 +2,7 @@
 namespace Ent\VisualComposer\Traits;
 
 trait RenderComponent {
-    protected function getContextData(array $atts) {
+    protected function get_context_data(array $fields) {
         return [];
     }
 
@@ -38,7 +38,7 @@ trait RenderComponent {
         $atts['context'] = \Ent::timber()->get_context();
 
         // Add extra context data
-        $atts = array_merge($atts, $this->getContextData($atts));
+        $atts = array_merge($atts, $this->get_context_data($atts));
 
         ob_start();
         \Timber::render($component . '/template.twig', $atts);

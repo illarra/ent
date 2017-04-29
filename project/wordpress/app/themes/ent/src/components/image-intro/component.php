@@ -4,7 +4,7 @@ use \Ent\VisualComposer\Field;
 class WPBakeryShortCode_image_intro extends Ent\VisualComposer\ShortCode {
     public static $is_layout = true;
 
-    protected function get_context_data(array $atts) {
+    protected function get_context_data(array $fields) {
         return [];
     }
 
