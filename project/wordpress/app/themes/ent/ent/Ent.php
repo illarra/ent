@@ -2,12 +2,12 @@
 namespace Ent;
 
 class Ent {
-    public static $cpt_loader;
-    public static $i18n;
-    public static $router;
-    public static $term_loader;
-    public static $timber;
-    public static $vc;
+    protected static $cpt_loader;
+    protected static $i18n;
+    protected static $router;
+    protected static $term_loader;
+    protected static $timber;
+    protected static $vc;
 
     public static function init($theme_dir, $config) {
         // Create alias so that Ent class can be accessed typing `Ent::` without namespace backslash
