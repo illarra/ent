@@ -8,6 +8,7 @@ class Ent {
     protected static $term_loader;
     protected static $timber;
     protected static $vc;
+    protected static $widgets;
 
     public static function init($theme_dir, $config) {
         // Create alias so that Ent class can be accessed typing `Ent::` without namespace backslash
@@ -18,6 +19,7 @@ class Ent {
         self::init_visualcomposer($theme_dir);
         self::init_menus_sidebars($config);
         self::init_i18n($theme_dir);
+        self::init_widgets($theme_dir);
         self::init_misc($config);
         self::init_router();
     }
@@ -87,6 +89,12 @@ class Ent {
 
         // This must go after `load_components` so that $layout_components is populated for `vc_column`
         self::$vc->standard_tweaks();
+    }
+
+    protected static function init_widgets($theme_dir) {
+        self::$widgets = new Widgets();
+        self::$widgets->load_widgets(__DIR__ . '/Widgets/widgets');
+        self::$widgets->load_widgets($theme_dir . '/src/widgets');
     }
 
     public static function router() {
