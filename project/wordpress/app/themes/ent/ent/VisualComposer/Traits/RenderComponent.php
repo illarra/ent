@@ -10,7 +10,7 @@ trait RenderComponent {
         $definition = \WPBMap::getShortCode($this->shortcode);
         $reflector = new \ReflectionClass(get_class($this));
 
-        $component = basename(dirname($reflector->getFileName()));
+        $template = dirname($reflector->getFileName()) .'/template.twig';
         $atts = array_merge(
             vc_map_get_attributes($this->getShortcode(), $atts),
             ['content' => do_shortcode($content)]
@@ -41,7 +41,7 @@ trait RenderComponent {
         $atts = array_merge($atts, $this->get_context_data($atts));
 
         ob_start();
-        \Timber::render($component . '/template.twig', $atts);
+        \Timber::render($template, $atts);
 
         return ob_get_clean();
     }

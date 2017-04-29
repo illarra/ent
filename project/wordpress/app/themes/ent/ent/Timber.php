@@ -13,10 +13,8 @@ class Timber {
 
         // Twig locations
         \Timber::$locations = [
-            $theme_dir . '/src/views',              // User templates
-            $theme_dir . '/src/components',         // User components
-            __DIR__ . '/views',                     // Ent templates
-            __DIR__ . '/VisualComposer/components', // Ent components
+            $theme_dir . '/src/views', // User templates
+            __DIR__ . '/views',        // Ent templates
         ];
 
         // Save Context for VC Components
