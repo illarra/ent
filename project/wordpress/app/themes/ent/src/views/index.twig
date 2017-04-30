@@ -6,6 +6,17 @@
             {{ page.hello }}<br>
             {{ page.content }}
             <hr>
+            {{ options.analytics_id }}<br>
+            {{ options.maps_api_key }}<br>
+            {{ options.checkbox ? 'true' : 'false' }}<br>
+            <img src="{{ options.logo.src|resize(200) }}"/><br>
+            {{ options.random }}<br>
+            Complex:<br>
+            {% for option in options.complex %}
+                &nbsp;&nbsp;&nbsp;&nbsp;{{ option.title }}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;{{ option.checkbox ? 'true' : 'false' }}<br>
+            {% endfor %}
+            <hr>
             {{ footer_address }}
         </div>
     </div>

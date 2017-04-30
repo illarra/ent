@@ -22,6 +22,7 @@ class Ent {
         self::init_widgets($theme_dir);
         self::init_misc($config);
         self::init_router();
+        self::init_theme_options($theme_dir);
     }
 
     public static function handle_request() {
@@ -78,6 +79,11 @@ class Ent {
 
     protected static function init_router() {
         self::$router = new Router();
+    }
+
+    protected static function init_theme_options($theme_dir) {
+        require_once($theme_dir .'/src/theme-options.php');
+        new \Ent\ThemeOptions\Options();
     }
 
     protected static function init_timber($theme_dir, $config) {

@@ -43,11 +43,6 @@ class Timber {
                 return get_permalink($id);
             }));
 
-            // Google Maps API
-            if (!empty($config['google_maps_api_key'])) {
-                $twig->addGlobal('google_maps_api_key', $config['google_maps_api_key']);
-            }
-
             return $twig;
         });
     }

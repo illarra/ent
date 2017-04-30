@@ -1,7 +1,6 @@
 <?php
 return [
     'timezone' => 'Europe/Madrid',
-    'google_maps_api_key' => 'AIzaSyAIp6IXmV1dmTkMNRWFSSA4zY0iaHXD0gU',
     'menus' => [
         'main_menu' => 'Menu principal',
     ],
