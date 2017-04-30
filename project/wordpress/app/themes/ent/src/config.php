@@ -1,6 +1,5 @@
 <?php
 return [
-    'timezone' => 'Europe/Madrid',
     'menus' => [
         'main_menu' => 'Menu principal',
     ],

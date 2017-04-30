@@ -14,6 +14,8 @@ class Ent {
         // Create alias so that Ent class can be accessed typing `Ent::` without namespace backslash
         class_alias(get_class($this), 'Ent');
 
+        self::set_defaults($config);
+
         self::init_timber($theme_dir, $config);
         self::init_cpts_terms($theme_dir);
         self::init_visualcomposer($theme_dir);
@@ -108,6 +110,14 @@ class Ent {
 
     public static function router() {
         return self::$router;
+    }
+
+    protected static function set_defaults(&$config) {
+        $config = array_merge([
+            'timezone' => 'Europe/Madrid',
+            'menus'    => [],
+            'sidebars' => [],
+        ], $config);
     }
 
     public static function timber() {
