@@ -5,20 +5,6 @@ abstract class Base {
     protected $namespace = '';
     protected $class_map = [];
 
-    public function get_cf_name($id) {
-        $labels = get_post_type_object($id)->labels;
-
-        if ($labels->singular_name) {
-            $name = $labels->singular_name;
-        } elseif ($labels->name) {
-            $name = $labels->name;
-        } else {
-            $name = $id;
-        }
-
-        return 'Form: ' . $name;
-    }
-
     public function get_class_map() {
         return $this->class_map;
     }
@@ -45,12 +31,10 @@ abstract class Base {
             // Register
             $this->register($id, $class::register());
 
-            // Create CarbonFields container and pass it to the static object for configuration
-            $container = $this->get_cf_container($id);
-            $class::define_custom_fields($container);
+            // Init CarbonFields container & fields
+            $class::init_carbon_fields();
         }
     }
 
-    abstract protected function get_cf_container($id);
     abstract protected function register($id, $definition);
 }

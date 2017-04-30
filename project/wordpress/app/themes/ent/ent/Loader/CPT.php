@@ -1,15 +1,8 @@
 <?php
 namespace Ent\Loader;
 
-use Carbon_Fields\Container;
-
 class CPT extends Base {
     protected $namespace = 'Ent\\CPT\\';
-
-    protected function get_cf_container($id) {
-        return Container::make('post_meta', $this->get_cf_name($id))
-            ->show_on_post_type($id);
-    }
 
     protected function register($id, $definition) {
         add_action('init', function () use ($id, $definition) {

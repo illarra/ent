@@ -2,12 +2,16 @@
 
 ## Ent library PRIORITY (php)
 ### Post/Terms
+- [ ] *!*Terms `register()` 
 - [ ] *!*EntField::media => media_gallery? :-/
 - [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
+    - https://github.com/timber/timber/issues/1399
+- [X] *!*Gestion de custom fields + `CarbonFields/Transformer`
 
 ### Widgets
 - [ ] *!*Convertir los viejos a CarbonFields: icons, search, recent posts, taxonomy list (categories), taxonomy cloud (tags), archives…
 - [ ] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
+- [ ] *!*Integrar `CarbonFields/Transformer`
     - Edo WPML string i18n plugina instalatu ta fuera, no?
 
 ### Router
@@ -15,6 +19,7 @@
     - http://framework.themosis.com/docs/1.3/routing/
 
 ### Templates, macros & hooks (twig)
+- [ ] *!*Timber twig `|resize` no funciona…
 - [ ] *!*Archive: author, tags, category, date (year, month, day), taxonomy x
 - [ ] *!*Single (post view)
 - [ ] *!*Single (page)
@@ -26,24 +31,31 @@
 - [X] *!*Tener la plantilla base twig en Ent
 
 ### Misc
+- [ ] *!*`config.php` timezone fuera, poner como opcional…
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
-- [ ] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
 - [ ] *!*Analytics mediante Ent
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
 - [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
 - [ ] Añadir un checklist? Analytics, SEO…
-    - Analytics ID
+    - Cambiar: `Theme > Analytics ID`
     - Cambiar: `SEO > Home Page Settings > Custom Home Page Title Tagline`
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
+- [X] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
 - [X] *!*Instalar: the seo framework y solucionar gestion de títulos
+
+### i18n
+- [ ] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
+- [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
 
 ### Forms
 - [ ] Formularios: gravity forms?
 
 ### Visual Composer
+- [ ] *!*No se esta cargando en las páginas.
+- [ ] VisualComposer Transformer como en CarbonFields
 - [ ] Componente mapa:
     - Gestionar API key a traves de theme-options?
     - http://bdadam.com/blog/simple-usability-trick-for-google-maps.html
@@ -52,9 +64,6 @@
 - [ ] Listado con filtros (ent component edo base class con plop y toda la movida)
 - [ ] VisualComposer <section><section class="image-intro">... basurilla hobetzia baziok?
 - [ ] Componente Widget area (eg: para poner contenido de footer en cualquier otro sitio, ej: “contact”)
-
-### i18n
-- [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
 
 ---
 

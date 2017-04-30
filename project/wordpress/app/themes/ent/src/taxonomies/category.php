@@ -5,7 +5,7 @@ use Carbon_Fields\Field;
 use Ent\CarbonFields\Field as EntField;
 
 class Category extends \Ent\Term {
-    public static function define_custom_fields($container) {
+    protected static function define_custom_fields($container) {
         $container->add_fields([
         ]);
     }
