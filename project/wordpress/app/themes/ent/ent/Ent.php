@@ -53,6 +53,9 @@ class Ent {
     }
 
     protected static function init_misc($config) {
+        // Add title-tag support
+        add_theme_support('title-tag');
+
         // Timezone
         date_default_timezone_set($config['timezone']);
 

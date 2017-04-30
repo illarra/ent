@@ -28,7 +28,9 @@
     "symfony/translation": "2.8.*",
     "symfony/yaml": "2.8.*",
     "timber/timber": "1.2.x",
-    "wpackagist-plugin/duplicator": "1.2.4"
+    "wpackagist-plugin/duplicator": "1.2.6",
+    "wpackagist-plugin/autodescription": "2.9.1",
+    "wpackagist-plugin/the-seo-framework-extension-manager": "1.1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
@@ -42,8 +44,8 @@
     "installer-paths": {
       "wordpress/app/mu-plugins/{$name}/": [
         "type:wordpress-muplugin",
-        "roots/soil",
-        "wpackagist-plugin/carbon-fields"
+        "htmlburger/carbon-fields",
+        "roots/soil"
       ],
       "wordpress/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "wordpress/app/themes/{$name}/": ["type:wordpress-theme"]
