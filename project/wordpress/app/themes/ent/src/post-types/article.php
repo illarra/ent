@@ -5,6 +5,8 @@ use Carbon_Fields\Field;
 use Ent\CarbonFields\Field as EntField;
 
 class Article extends \Ent\CPT {
+    public static $enable_vc = false;
+
     public static function register() {
         // See: https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
         return [

@@ -8,6 +8,7 @@ abstract class CPT extends \Timber\Post {
     use CarbonFieldsContainer;
 
     protected static $cf_get_function = 'carbon_get_post_meta';
+    public static $enable_vc = false;
 
     public static function register() {}
 

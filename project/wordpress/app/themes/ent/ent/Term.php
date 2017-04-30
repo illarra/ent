@@ -8,6 +8,7 @@ abstract class Term extends \Timber\Term {
     use CarbonFieldsContainer;
 
     protected static $cf_get_function = 'carbon_get_term_meta';
+    public static $enable_vc = false;
 
     public static function register() {}
 

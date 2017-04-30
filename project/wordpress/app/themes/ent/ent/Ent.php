@@ -17,8 +17,8 @@ class Ent {
         self::set_defaults($config);
 
         self::init_timber($theme_dir, $config);
-        self::init_cpts_terms($theme_dir);
         self::init_visualcomposer($theme_dir);
+        self::init_cpts_terms($theme_dir);
         self::init_menus_sidebars($config);
         self::init_i18n($theme_dir);
         self::init_widgets($theme_dir);

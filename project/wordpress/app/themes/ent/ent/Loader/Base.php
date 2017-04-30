@@ -33,6 +33,11 @@ abstract class Base {
 
             // Init CarbonFields container & fields
             $class::init_carbon_fields();
+
+            // Register in VisualComposer
+            if ($class::$enable_vc) {
+                \Ent::vc()->enable_cpt($id);
+            }
         }
     }
 
