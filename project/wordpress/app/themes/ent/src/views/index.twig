@@ -1,11 +1,12 @@
 {% extends 'layout.twig' %}
 
-{% block body %}
+{% block main %}
     <div class="row">
         <div class="small-12 columns">
             {{ page.hello }}<br>
             {{ page.content }}
+            <hr>
+            {{ footer_address }}
         </div>
     </div>
-    {{ footer_address }}
 {% endblock %}
