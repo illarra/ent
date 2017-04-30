@@ -3,10 +3,10 @@
 define('WP_ENV', __DIR__ == '/var/project/wordpress' ? 'DEV' : 'PROD');
 
 // Load configuration
-$config = require_once('config/dev.php');
+$config = require_once(__DIR__ .'/config/dev.php');
 
 if (WP_ENV == 'PROD') {
-    $config = array_merge($config, require_once('config/prod.php'));
+    $config = array_merge($config, require_once(__DIR__ .'/config/prod.php'));
 }
 
 define('ROOT_DIR', __DIR__);
