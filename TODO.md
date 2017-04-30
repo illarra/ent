@@ -26,7 +26,6 @@
 - [X] *!*Tener la plantilla base twig en Ent
 
 ### Misc
-- [ ] *!*Instalar: the seo framework y solucionar gestion de títulos
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
 - [ ] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
 - [ ] *!*Analytics mediante Ent
@@ -39,6 +38,7 @@
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
+- [X] *!*Instalar: the seo framework y solucionar gestion de títulos
 
 ### Forms
 - [ ] Formularios: gravity forms?
