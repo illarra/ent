@@ -20,6 +20,7 @@ abstract class CPT extends \Timber\Post {
 
     protected static function get_cf_container($id, $label) {
         return Container::make('post_meta', $label)
-            ->show_on_post_type($id);
+            ->show_on_post_type($id)
+            ->set_priority('low');
     }
 }

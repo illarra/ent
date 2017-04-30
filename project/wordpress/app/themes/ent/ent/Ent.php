@@ -59,6 +59,10 @@ class Ent {
         // Add title-tag support
         add_theme_support('title-tag');
 
+        add_filter('the_seo_framework_metabox_priority', function () {
+            return 'low';
+        });
+
         // Timezone
         date_default_timezone_set($config['timezone']);
 

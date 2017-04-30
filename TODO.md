@@ -32,6 +32,7 @@
 
 ### Misc
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
+- [ ] *!*Check si soil esta funcionando bien
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
 - [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
@@ -54,7 +55,6 @@
 - [ ] Formularios: gravity forms?
 
 ### Visual Composer
-- [ ] *!*No se esta cargando en las páginas.
 - [ ] VisualComposer Transformer como en CarbonFields
 - [ ] Componente mapa:
     - Gestionar API key a traves de theme-options?
@@ -64,6 +64,7 @@
 - [ ] Listado con filtros (ent component edo base class con plop y toda la movida)
 - [ ] VisualComposer <section><section class="image-intro">... basurilla hobetzia baziok?
 - [ ] Componente Widget area (eg: para poner contenido de footer en cualquier otro sitio, ej: “contact”)
+- [X] *!*No se esta cargando en las páginas.
 
 ---
 
