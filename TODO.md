@@ -2,10 +2,10 @@
 
 ## Ent library PRIORITY (php)
 ### Post/Terms
-- [ ] *!*Terms `register()` 
 - [ ] *!*EntField::media => media_gallery? :-/
 - [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
     - https://github.com/timber/timber/issues/1399
+- [X] *!*Terms `register()`
 - [X] *!*Gestion de custom fields + `CarbonFields/Transformer`
 
 ### Widgets

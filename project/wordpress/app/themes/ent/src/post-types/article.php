@@ -6,7 +6,7 @@ use Ent\CarbonFields\Field as EntField;
 
 class Article extends \Ent\CPT {
     public static function register() {
-        // See: https://codex.wordpress.org/Function_Reference/register_post_type#Parameters
+        // See: https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
         return [
             'labels' => [
                 'name'          => 'Notícies',
