@@ -32,7 +32,6 @@
 
 ### Misc
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
-- [ ] *!*Analytics mediante Ent
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
 - [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
@@ -42,6 +41,7 @@
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
+- [X] *!*Analytics mediante Ent
 - [X] *!*`config.php` timezone fuera, poner como opcional…
 - [X] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
 - [X] *!*Instalar: the seo framework y solucionar gestion de títulos
