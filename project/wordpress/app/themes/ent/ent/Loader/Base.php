@@ -53,44 +53,4 @@ abstract class Base {
 
     abstract protected function get_cf_container($id);
     abstract protected function register($id, $definition);
-
-    /*
-    static public $cf_containers = [];
-
-    public static function getPostMeta($key, $obj) {
-        self::getMeta($key, $obj, 'carbon_get_post_meta');
-    }
-    
-    public static function getTermMeta($key, $obj) {
-        self::getMeta($key, $obj, 'carbon_get_term_meta');
-    }
-    
-    protected static function getMeta($key, $obj, $fn) {
-        foreach (self::$cf_containers[$key]->get_fields() as $field) {
-            $field_name = $field->get_base_name();
-
-            if (get_class($field) == 'Carbon_Fields\Field\Complex_Field') {
-                $type = 'complex';
-            } else if (get_class($field) == 'Carbon_Fields\Field\Map_Field') {
-                $type = 'map';
-            } else {
-                $type = null;
-            }
-
-            $obj->$field_name = $fn($obj->id, $field_name, $type);
-            
-            if (get_class($field) == 'Carbon_Fields\Field\Checkbox_Field') {
-                $obj->$field_name = $obj->$field_name === 'yes';
-            } else if (get_class($field) == 'Carbon_Fields\Field\Date_Field') {
-                if (!empty($obj->$field_name)) {
-                    $obj->$field_name = new \Datetime($obj->$field_name);
-                }
-            }
-        }
-    }
-    
-    public static function setMeta($key, $cb) {
-        self::$cf_containers[$key] = $cb();
-    }
-    */
 }
