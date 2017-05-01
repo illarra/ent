@@ -22,7 +22,7 @@
   "require": {
     "php": ">=5.6",
     "composer/installers": "~1.2.0",
-    "htmlburger/carbon-fields": "1.5.x",
+    "htmlburger/carbon-fields": "dev-master#727d9eb8f2",
     "johnpbloch/wordpress": "4.7.4",
     "roots/soil": "3.x",
     "symfony/translation": "2.8.*",

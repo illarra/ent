@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d105408c095958111a7ff88c56ebd77",
+    "content-hash": "cafc38479506cf8e66a6eb313e267251",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -220,16 +220,16 @@
         },
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v1.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "a518641bf431f967c522a6ae0757a2a8b68ecd63"
+                "reference": "727d9eb8f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/a518641bf431f967c522a6ae0757a2a8b68ecd63",
-                "reference": "a518641bf431f967c522a6ae0757a2a8b68ecd63",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/727d9eb8f2",
+                "reference": "727d9eb8f2",
                 "shasum": ""
             },
             "require": {
@@ -319,11 +319,16 @@
                     "email": "kaloyanxivanov@gmail.com",
                     "homepage": "http://vilepixels.com/",
                     "role": "Developer"
+                },
+                {
+                    "name": "Atanas Angelov",
+                    "email": "atanas.angelov.dev@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2016-12-14T13:09:00+00:00"
+            "time": "2017-03-15T07:18:00+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -983,7 +988,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "htmlburger/carbon-fields": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
