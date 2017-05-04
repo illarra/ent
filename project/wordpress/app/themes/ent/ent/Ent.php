@@ -23,8 +23,12 @@ class Ent {
         self::init_i18n($theme_dir);
         self::init_widgets($theme_dir);
         self::init_misc($config);
-        self::init_router();
+        self::init_router($theme_dir);
         self::init_theme_options($theme_dir);
+    }
+
+    public static function handle($route, $cb) {
+        self::$router->handle($route, $cb);
     }
 
     public static function handle_request() {
@@ -83,8 +87,9 @@ class Ent {
         });
     }
 
-    protected static function init_router() {
+    protected static function init_router($theme_dir) {
         self::$router = new Router();
+        self::$router->load_routes($theme_dir . '/src/routes');
     }
 
     protected static function init_theme_options($theme_dir) {
