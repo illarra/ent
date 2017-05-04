@@ -10,12 +10,12 @@
 
 ### Widgets
 - [ ] *!*Convertir los viejos a CarbonFields: icons, search, recent posts, taxonomy list (categories), taxonomy cloud (tags), archives…
+- [ ] *!*Integrar `CarbonFields/Transformer` (?)
 - [ ] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
-- [ ] *!*Integrar `CarbonFields/Transformer`
     - Edo WPML string i18n plugina instalatu ta fuera, no?
 
 ### Router
-- [ ] *!*Route handler, que no tenga que crear un “home.php” y copiar toda la movida de $context por que quiero simplemente añadir una propiedad (ver Fil a l’afulla “home.php”).
+- [X] *!*Route handler, que no tenga que crear un “home.php” y copiar toda la movida de $context por que quiero simplemente añadir una propiedad (ver Fil a l’afulla “home.php”).
     - http://framework.themosis.com/docs/1.3/routing/
 
 ### Templates, macros & hooks (twig)
@@ -33,6 +33,7 @@
 ### Misc
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
 - [ ] *!*Check si soil esta funcionando bien
+- [ ] *!*Instalar: plugin bueno para gestionar archivos media de WP
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
 - [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
@@ -49,6 +50,7 @@
 
 ### i18n
 - [ ] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
+    - Traducir strings de Ent\Router `__()`
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
 
 ### Forms
@@ -108,6 +110,7 @@
 ---
 
 ## Misc
+- [ ] emmet.io (?)
 - [ ] Hemendik gauza interesgarri batzuk ateatzia zeudek? http://wpgear.org 
 - [ ] http://wptest.io/demo/
 - [ ] https://github.com/wp-premium => Plugins via GIT!
