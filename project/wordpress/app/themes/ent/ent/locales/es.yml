@@ -1,0 +1,18 @@
+ent:
+    404:
+        text: Página no encontrada
+    search:
+        text: Buscar
+        no_results: No hay resultados
+    archive:
+        author: Autor
+        day: Día
+        day_format: j \d\e F, Y # 15 de març, 2013
+        month: Mes
+        month_format: F Y # març 2013
+        year: Año
+        year_format: Y # 2013
+        read_more: Leer más
+        prev: Anterior
+        next: Siguiente
+        posts_not_found: No hay entradas con el filtro especificado.

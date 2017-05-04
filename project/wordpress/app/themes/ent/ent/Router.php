@@ -69,17 +69,17 @@ class Router {
                     $this->match(['archive', 'author'], $context);
                 } elseif (is_year()) {
                     $context['_type'] = 'archive.date.year';
-                    $context['_year'] = get_the_date(__('ent.blog.year_format'));
+                    $context['_year'] = get_the_date(__('ent.archive.year_format'));
 
                     $this->match(['archive', 'date', 'year'], $context);
                 } elseif (is_month()) {
                     $context['_type']  = 'archive.date.month';
-                    $context['_month'] = get_the_date(__('ent.blog.month_format'));
+                    $context['_month'] = get_the_date(__('ent.archive.month_format'));
 
                     $this->match(['archive', 'date', 'month'], $context);
                 } elseif (is_day()) {
                     $context['_type'] = 'archive.date.day';
-                    $context['_day']  = get_the_date(__('ent.blog.day_format'));
+                    $context['_day']  = get_the_date(__('ent.archive.day_format'));
 
                     $this->match(['archive', 'date', 'day'], $context);
                 }

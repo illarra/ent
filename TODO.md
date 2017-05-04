@@ -49,9 +49,9 @@
 - [X] *!*Instalar: the seo framework y solucionar gestion de títulos
 
 ### i18n
-- [ ] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
-    - Traducir strings de Ent\Router `__()`
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
+- [X] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
+    - Traducir strings de Ent\Router `__()`
 
 ### Forms
 - [ ] Formularios: gravity forms?

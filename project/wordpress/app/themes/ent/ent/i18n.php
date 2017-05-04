@@ -16,10 +16,12 @@ class i18n {
             $translator = new Translation\Translator(ICL_LANGUAGE_CODE, new Translation\MessageSelector());
             $translator->setFallbackLocale($default_locale);
             $translator->addLoader('yaml', new Translation\Loader\YamlFileLoader());
+            $translator->addResource('yaml', __DIR__ .'/locales/'. ICL_LANGUAGE_CODE .'.yml', ICL_LANGUAGE_CODE);
             $translator->addResource('yaml', $theme_dir .'/src/locales/'. ICL_LANGUAGE_CODE .'.yml', ICL_LANGUAGE_CODE);
 
             // Load also the default locale if we're not in the default one
             if (ICL_LANGUAGE_CODE != $default_locale) {
+                $translator->addResource('yaml', __DIR__ .'/locales/'. $default_locale .'.yml', $default_locale);
                 $translator->addResource('yaml', $theme_dir .'/src/locales/'. $default_locale .'.yml', $default_locale);
             }
 
