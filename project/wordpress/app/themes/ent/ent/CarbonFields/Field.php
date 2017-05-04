@@ -4,8 +4,8 @@ namespace Ent\CarbonFields;
 use Carbon_Fields\Field;
 
 class Field {
-    public static function media($title) {
-        return Field::make('complex', 'media', $title)
+    public static function media_gallery($title, $id = 'media_gallery') {
+        return Field::make('complex', $id, $title)
             ->set_collapsed(true)
             ->add_fields('image', 'Imatge', [
                 Field::make('image', 'image', 'Imatge')->set_required(true),
@@ -21,8 +21,8 @@ class Field {
             ->set_header_template('{{ image }} <a href="{{ video_url }}" target="_blank">{{ video_url }}</a>');
     }
 
-    public static function attachments($title) {
-        return Field::make('complex', 'attachments', $title)
+    public static function attachments($title, $id = 'attachments') {
+        return Field::make('complex', $id, $title)
             ->set_collapsed(true)
             ->add_fields([
                 Field::make('text', 'title', 'Nom')->set_required(true),
@@ -30,8 +30,8 @@ class Field {
             ])->set_header_template('{{ title }}');
     }
 
-    public static function links($title) {
-        return Field::make('complex', 'links', $title)
+    public static function links($title, $id) {
+        return Field::make('complex', $id, $title)
             ->set_collapsed(true)
             ->add_fields([
                 Field::make('text', 'title', 'Nom')->set_required(true),
