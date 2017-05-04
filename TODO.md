@@ -1,34 +1,23 @@
 # TODO
 
 ## Ent library PRIORITY (php)
-### Post/Terms
-- [ ] *!*EntField::media => media_gallery? :-/
-- [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
-    - https://github.com/timber/timber/issues/1399
-- [X] *!*Terms `register()`
-- [X] *!*Gestion de custom fields + `CarbonFields/Transformer`
-
-### Widgets
-- [ ] *!*Convertir los viejos a CarbonFields: icons, search, recent posts, taxonomy list (categories), taxonomy cloud (tags), archives…
-- [ ] *!*Integrar `CarbonFields/Transformer` (?)
-- [ ] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
-    - Edo WPML string i18n plugina instalatu ta fuera, no?
-
-### Router
-- [X] *!*Route handler, que no tenga que crear un “home.php” y copiar toda la movida de $context por que quiero simplemente añadir una propiedad (ver Fil a l’afulla “home.php”).
-    - http://framework.themosis.com/docs/1.3/routing/
-
 ### Templates, macros & hooks (twig)
-- [ ] *!*Timber twig `|resize` no funciona…
 - [ ] *!*Archive: author, tags, category, date (year, month, day), taxonomy x
 - [ ] *!*Single (post view)
 - [ ] *!*Single (page)
 - [ ] *!*Home (blog index)
 - [ ] *!*404
 - [ ] *!*Search
-- [ ] *!*Tipos de cabecera
-- [ ] *!*Tipos de footer
+- [ ] *!*Timber twig `|resize` no funciona…
+- [ ] *!*Tipos de cabecera (munger)
+- [ ] *!*Tipos de footer (munger)
 - [X] *!*Tener la plantilla base twig en Ent
+
+### Widgets
+- [ ] *!*Convertir los viejos a CarbonFields: icons, search, recent posts, taxonomy list (categories), taxonomy cloud (tags), archives…
+- [ ] *!*Integrar `CarbonFields/Transformer` (?)
+- [ ] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
+    - Edo WPML string i18n plugina instalatu ta fuera, no?
 
 ### Misc
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
@@ -47,6 +36,17 @@
 - [X] *!*`config.php` timezone fuera, poner como opcional…
 - [X] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
 - [X] *!*Instalar: the seo framework y solucionar gestion de títulos
+
+### Post/Terms
+- [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
+    - https://github.com/timber/timber/issues/1399
+- [X] *!*Terms `register()`
+- [X] *!*Gestion de custom fields + `CarbonFields/Transformer`
+- [X] *!*EntField::media => media_gallery? :-/
+
+### Router
+- [X] *!*Route handler, que no tenga que crear un “home.php” y copiar toda la movida de $context por que quiero simplemente añadir una propiedad (ver Fil a l’afulla “home.php”).
+    - http://framework.themosis.com/docs/1.3/routing/
 
 ### i18n
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
