@@ -18,8 +18,11 @@ class SidebarManager {
             });
 
             add_filter('timber/context', function ($data) use ($sidebars) {
+                $data['_sidebars'] = [];
+
                 foreach ($sidebars as $id => $name) {
                     $data[$id] = \Timber::get_widgets($id);
+                    $data['_sidebars'][$id] = $data[$id];
                 }
 
                 return $data;

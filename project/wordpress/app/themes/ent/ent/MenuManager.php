@@ -9,8 +9,11 @@ class MenuManager {
             });
 
             add_filter('timber/context', function ($data) use ($menus) {
+                $data['_menus'] = [];
+
                 foreach ($menus as $id => $name) {
                     $data[$id] = new \TimberMenu($id);
+                    $data['_menus'][$id] = $data[$id];
                 }
 
                 return $data;

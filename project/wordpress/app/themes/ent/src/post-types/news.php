@@ -4,7 +4,7 @@ namespace Ent\CPT;
 use Carbon_Fields\Field;
 use Ent\CarbonFields\Field as EntField;
 
-class Article extends \Ent\CPT {
+class News extends \Ent\CPT {
     public static $enable_vc = false;
 
     public static function register() {
@@ -16,7 +16,7 @@ class Article extends \Ent\CPT {
             ],
             'add_support'    => ['thumbnail'],
             'remove_support' => [],
-            'taxonomies'     => ['category', 'post_tag', 'fa_area'],
+            'taxonomies'     => ['category', 'post_tag'],
             'rewrite'        => ['slug' => 'noticies'],
             'public'         => true,
             'has_archive'    => true,
@@ -26,7 +26,6 @@ class Article extends \Ent\CPT {
 
     protected static function define_custom_fields($container) {
         $container->add_fields([
-            Field::make('text', 'author', 'Autor'),
         ]);
     }
 }

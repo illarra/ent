@@ -2,7 +2,8 @@
 namespace Ent;
 
 class Router {
-    protected $routes = [];
+    protected $context = [];
+    protected $routes  = [];
 
     public function __construct() {
     }
@@ -37,24 +38,26 @@ class Router {
 
     public function handle_request() {
         $context = \Timber::get_context();
-        $context['_tpl'] = 'index.twig';
+
+        $context['_layout']         = $this->context['layout'];
+        $context['_layout_sidebar'] = $this->context['layout_sidebar'];
+        $context['_sidebar_name']   = $this->context['sidebar_name'];
 
         if (is_home() || is_archive() || is_search()) {
-            $context['entries'] = new \Timber\PostQuery();
+            $context['_template'] = 'archive.twig';
+            $context['entries']   = new \Timber\PostQuery();
 
             if (is_home()) {
-                $context['_tpl']  = 'blog.twig';
-                $context['_type'] = 'home';
+                $context['_type']      = 'home';
+                $context['_post_type'] = 'post';
 
                 $this->match(['home'], $context);
             } elseif (is_archive()) {
-                $context['_tpl']  = 'archive.twig';
-
                 $q = get_queried_object();
 
                 if (is_post_type_archive()) {
                     $context['_type']      = 'archive.post-type';
-                    $context['_post_type'] = $q;
+                    $context['_post_type'] = $q->name;
 
                     $this->match(['archive', 'post-type', $q->name], $context);
                 } elseif (is_category() || is_tag() || is_tax()) {
@@ -90,27 +93,35 @@ class Router {
                 $this->match(['search'], $context);
             }
         } elseif (is_front_page() || is_singular()) {
-            $context['entry'] = \Timber::get_post();
+            $context['_template'] = 'page.twig';
+            $context['_type']     = 'post-type';
+            $context['entry']     = \Timber::get_post();
 
             if (is_front_page()) {
                 $context['_type'] = 'front-page';
 
                 $this->match(['front-page'], $context);
-            } elseif (is_singular()) {
-                $context['_type'] = 'post-type';
-
+            } elseif (is_page()) {
+                $this->match(['post-type', 'page'], $context);
+            } elseif (is_single()) {
+                $context['_template'] = 'post.twig';
                 $q = get_queried_object();
 
-                $this->match(['post-type', $q->post_type], $context);   
+                $this->match(['post-type', $q->post_type], $context);
             }
         } elseif (is_404()) {
-            $context['_type'] = '404';
+            $context['_template'] = '404.twig';
+            $context['_type']     = '404';
 
             $this->match(['404'], $context);
+        } else {
+            $context['_template'] = 'index.twig';
+
+            $this->match([], $context);
         }
 
-        $tpl = $context['_tpl'];
-        \Timber::render([$tpl, 'ent/'. $tpl], $context);
+        $template = $context['_template'];
+        \Timber::render([$template, 'ent/'. $template], $context);
     }
 
     protected function run_match($match, &$context) {
@@ -121,5 +132,9 @@ class Router {
                 $cb($context);
             }
         }
+    }
+
+    public function set_context_data($context) {
+        $this->context = $context;
     }
 }

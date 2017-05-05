@@ -1,0 +1,18 @@
+{% extends 'ent/archive.twig' %}
+
+{% block sidebar %}
+    {% if _post_type == 'post' or _post_type == 'news' %}
+        <div class="ent-archive-header">
+            <h2 class="ent-archive-header__title">
+                <span>{{ _post_type == 'post' ? __('post_type.news.title') : __('post_type.post.title') }}</span>
+            </h2>
+        </div>
+        <ul>
+            {% for entry in related_entries %}
+                <li><a href="{{ entry.link }}">{{ entry.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endif %}
+    {{ parent() }}
+{% endblock %}

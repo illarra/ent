@@ -1,15 +1,25 @@
 # TODO
 
-## Ent library PRIORITY (php)
+## Ent library (php)
 ### Templates, macros & hooks (twig)
-- [ ] *!*Archive: author, tags, category, date (year, month, day), taxonomy x
+- [X] *!*Home (blog index)
+- [X] *!*Front page
+- [X] *!*404
+- [ ] *!*Archive:
+    - Title de content: primero calcular el string, guardarlo (set), y despues añadir un bloque con el html
+    - [ ] search
+    - [ ] year
+    - [ ] month
+    - [ ] day
+    - [ ] author
+    - [ ] term: category, tags, x…
+    - [ ] post-type
 - [ ] *!*Single (post view)
-- [ ] *!*Single (page)
-- [ ] *!*Home (blog index)
-- [ ] *!*404
-- [ ] *!*Search
+- [X] *!*Single (page)
+
 - [ ] *!*Timber twig `|resize` no funciona…
 - [ ] *!*Tipos de cabecera (munger)
+    - Twig include + blocks?? :-/
 - [ ] *!*Tipos de footer (munger)
 - [X] *!*Tener la plantilla base twig en Ent
 

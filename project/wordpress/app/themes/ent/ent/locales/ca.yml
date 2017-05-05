@@ -15,4 +15,4 @@ ent:
         read_more: Llegir més
         prev: Anterior
         next: Següent
-        posts_not_found: No hi ha entrades amb el filtre especificat.
+        entries_not_found: No hi ha entrades amb el filtre especificat.
