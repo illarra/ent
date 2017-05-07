@@ -1,15 +1,15 @@
-# Translation of Plugins - Duplicator - Stable (latest release) in Spanish (Spain)
-# This file is distributed under the same license as the Plugins - Duplicator - Stable (latest release) package.
+# Translation of Plugins - Duplicator &#8211; WordPress Migration Plugin - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Duplicator &#8211; WordPress Migration Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-04-12 10:10:51+0000\n"
+"PO-Revision-Date: 2017-05-03 02:44:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: es\n"
-"Project-Id-Version: Plugins - Duplicator - Stable (latest release)\n"
+"Project-Id-Version: Plugins - Duplicator &#8211; WordPress Migration Plugin - Stable (latest release)\n"
 
 #: views/settings/storage.php:13
 msgid "Store your packages in multiple<br/> locations  with Duplicator Professional"
@@ -57,7 +57,7 @@ msgstr "Ayuda a promocionar Duplicator"
 
 #: views/packages/details/transfer.php:26 views/settings/storage.php:26
 msgid "Setup a one-time storage location and automatically <br/> push the package to your destination."
-msgstr "Configura la ubicación de almacenamiento una vez <br/> y automáticamente sube el paquete a tu destino."
+msgstr "Configura la ubicación de almacenamiento una vez <br/> y sube el paquete automáticamente a tu destino."
 
 #: views/packages/details/transfer.php:22 views/settings/storage.php:22
 msgid "Custom Directory"
@@ -97,7 +97,7 @@ msgstr "Esto puede tardar varios minutos."
 
 #: views/packages/main/new2.scan.php:109
 msgid "Keep this window open during the scan process."
-msgstr "Mantén esta ventana abierta durante el proceso de escaneo."
+msgstr "Mantén esta ventana abierta durante el proceso de análisis."
 
 #: views/packages/main/new1.setup.php:199
 msgid "WordPress Root Path:"
@@ -353,7 +353,7 @@ msgstr "Depuración"
 
 #: views/help/about.php:60
 msgid "Duplicator helps you streamlines your workflows and quickly clone a WordPress site. The plugin was made to help you speed up the migration process of moving a WordPress site. Please help us to continue in the development effort of this plugin with a 5 star."
-msgstr "Duplicador te ayuda a optimizar tus flujos de trabajo y clonar rápidamente un sitio WordPress. El plugin se realizó para ayudarte a acelerar el proceso de migración de un sitio WordPress. Por favor, ayúdanos a continuar con el esfuerzo de desarrollo de este plugin con 5 estrellas."
+msgstr "Duplicator te ayuda a optimizar tus flujos de trabajo y clonar rápidamente un sitio WordPress. El plugin se realizó para ayudarte a acelerar el proceso de migración de un sitio WordPress. Por favor, ayúdanos a continuar con el esfuerzo de desarrollo de este plugin con 5 estrellas."
 
 #: duplicator.php:244 views/settings/general.php:110
 msgid "Debug"
@@ -408,11 +408,11 @@ msgstr "El análisis de validación de integridad está ejecutándose, por favor
 
 #: views/tools/diagnostics/inc.validator.php:34 views/tools/diagnostics.php:369
 msgid "A message will show indicated that that a scan depth has been reached. "
-msgstr "Aparecerá un mensaje indicando que se ha realizado el análisis en profundidad."
+msgstr "Aparecerá un mensaje indicando que se ha alcanzado la profundidad de análisis."
 
 #: views/tools/diagnostics/inc.validator.php:33 views/tools/diagnostics.php:368
 msgid "If there is a recursive loop on your system then the process has a built in check to stop after a large set of files and directories have been scanned.  "
-msgstr "Si hay un bucle recursivo en tu sistema, el proceso tiene una comprobación integrada para detenerse después de que se hayan analizado un gran conjunto de archivos y directorios."
+msgstr "Si hay un bucle recursivo en tu sistema, el proceso tiene una comprobación integrada para detenerse después de que se hayan analizado un gran conjunto de archivos y directorios. "
 
 #: views/tools/diagnostics/inc.validator.php:32 views/tools/diagnostics.php:367
 msgid "The utility  will also show how many files and directories you have in your system.  This process may take several minutes to run.  "
@@ -420,7 +420,7 @@ msgstr "La utilidad también mostrará cuántos archivos y directorios tienes en
 
 #: views/tools/diagnostics/inc.validator.php:31 views/tools/diagnostics.php:366
 msgid "This utility will help to find unreadable files and sys-links in your environment  that can lead to issues during the scan process.  "
-msgstr "Esta utilidad ayudará a encontrar archivos ilegibles y enlaces del sistema en tu entorno que pueden causar problemas durante el proceso de análisis."
+msgstr "Esta utilidad te ayudará a encontrar archivos ilegibles y enlaces de sistema en tu entorno que pueden causar problemas durante el proceso de análisis.  "
 
 #: views/tools/diagnostics/inc.validator.php:26 views/tools/diagnostics.php:361
 msgid "Scan Validator"
@@ -476,7 +476,7 @@ msgstr "- En algunos alojamientos baratos, escanear alrededor de 30k archivos pu
 
 #: views/packages/main/new2.scan.php:617
 msgid "Unable to perform a full scan, please try the following actions:"
-msgstr "No se pudo realizar un escaneo completo. Por favor, intenta lo siguiente:"
+msgstr "No se pudo realizar un análisis completo. Por favor, intenta lo siguiente:"
 
 #: views/packages/main/new2.scan.php:622
 msgid "Common Issues:"
@@ -915,15 +915,15 @@ msgstr "El servidor web no permite devolver los archivos con extensión .log"
 
 #: views/tools/logging.php:145
 msgid "Reasons for log file not showing"
-msgstr "Motivos por los que no se muestra el fichero de log"
+msgstr "Motivos por los que no se muestra el archivo de registro"
 
 #: views/tools/logging.php:144
 msgid "Try to create a package, since no log files were found in the snapshots directory with the extension *.log"
-msgstr "Intentando crear un paquete porque no se han encontrado ficheros de log con la extensión *.log en el directorio de instantáneas."
+msgstr "Intenta crear un paquete, ya que no se han encontrado archivos de registro con la extensión *.log en el directorio de instantáneas"
 
 #: views/tools/logging.php:143
 msgid "Log file not found or unreadable"
-msgstr "Archivo de registro no encontrado o no se puede leer"
+msgstr "Archivo de registro no encontrado o ilegible"
 
 #: views/tools/diagnostics.php:445
 msgid "Delete this option value"
@@ -1085,7 +1085,7 @@ msgstr "Ver los ajustes de estado restablecidos."
 
 #: views/tools/diagnostics/main.php:25 views/tools/diagnostics.php:110
 msgid "Plugin settings reset."
-msgstr "Configuración del Plugin restablecido."
+msgstr "Ajustes del plugin restablecidos."
 
 #: views/tools/diagnostics/inc.settings.php:4
 #: views/tools/diagnostics/inc.settings.php:5 views/tools/diagnostics.php:88
@@ -1115,7 +1115,7 @@ msgstr "Esta acción eliminará todos los ajustes heredados antes de la versión
 
 #: views/tools/cleanup.php:143
 msgid "Removes all build data from:"
-msgstr "Eliminando todos los datos de los procesos desde: "
+msgstr "Elimina todos los datos de los procesos desde: "
 
 #: views/tools/cleanup.php:142
 msgid "Clear Build Cache"
@@ -1123,19 +1123,19 @@ msgstr "Limpiar la cache del proceso"
 
 #: views/tools/cleanup.php:139
 msgid "Removes all legacy data and settings prior to version"
-msgstr "Eliminar todos los datos legales y configuraciones de la anterior versión"
+msgstr "Elimina todos los datos y configuraciones heredados de la versión anterior"
 
 #: views/tools/cleanup.php:138
 msgid "Delete Legacy Data"
-msgstr "Borrar datos heredados"
+msgstr "Eliminar datos heredados"
 
 #: views/tools/cleanup.php:117
 msgid "Removes all reserved installer files."
-msgstr "Borrar todos los datos reservados del instalador."
+msgstr "Elimina todos los archivos reservados del instalador."
 
 #: views/tools/cleanup.php:113
 msgid "Delete Reserved Files"
-msgstr "Borrar archivos reservados"
+msgstr "Eliminar archivos reservados"
 
 #: views/tools/cleanup.php:108
 msgid "Data Cleanup"
@@ -1156,7 +1156,7 @@ msgstr "Eliminada la cache del proceso"
 #: views/tools/cleanup.php:32 views/tools/diagnostics/main.php:30
 #: views/tools/diagnostics.php:115
 msgid "Legacy data removed."
-msgstr "Datos heredados borrados."
+msgstr "Datos heredados eliminados."
 
 #: views/tools/cleanup.php:27
 msgid "Installer file cleanup ran!"
@@ -1220,7 +1220,7 @@ msgstr "Esto intentará mantener una conexión de red para archivos grandes."
 
 #: views/settings/packages.php:184
 msgid "Attempt Network Keep Alive"
-msgstr "Intentando mantener la red activa"
+msgstr "Intentar mantener la red activa"
 
 #: views/settings/packages.php:181
 msgid "Archive Flush"
@@ -1689,7 +1689,7 @@ msgstr "(borrar)"
 
 #: views/packages/main/new1.inc.form.php:151
 msgid "cache"
-msgstr "cache"
+msgstr "caché"
 
 #: views/packages/main/new1.inc.form.php:150
 msgid "wp-uploads"
@@ -2157,7 +2157,7 @@ msgstr "Ayuda"
 msgid "Get Help"
 msgstr "Obtener ayuda"
 
-#: classes/utilities/class.u.php:338
+#: classes/utilities/class.u.php:352
 msgid "You do not have sufficient permissions to access this page."
 msgstr "No tienes suficientes permisos para acceder esta página."
 
@@ -2167,4 +2167,4 @@ msgstr "¡Llévame a la página de limpieza!"
 
 #: classes/ui/class.ui.notice.php:42 classes/ui/class.ui.notice.php:45
 msgid "Reserved Duplicator install files have been detected in the root directory.  Please delete these reserved files to avoid security issues."
-msgstr "Se han detectado archivos reservados de instalación de Duplicador en el directorio raíz. Elimina estos archivos reservados para evitar problemas de seguridad."
+msgstr "Se han detectado archivos reservados de instalación de Duplicator en el directorio raíz. Elimina estos archivos reservados para evitar problemas de seguridad."
