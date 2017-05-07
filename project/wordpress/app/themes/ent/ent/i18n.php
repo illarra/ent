@@ -50,8 +50,6 @@ class i18n {
 
     public function get_locales() {
         $locales = icl_get_languages('skip_missing=0');
-
-        // Save locales map
         $locales_map = [];
 
         foreach ($locales as $code => $locale) {
