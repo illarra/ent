@@ -47,4 +47,17 @@ class i18n {
             });
         });
     }
+
+    public function get_locales() {
+        $locales = icl_get_languages('skip_missing=0');
+
+        // Save locales map
+        $locales_map = [];
+
+        foreach ($locales as $code => $locale) {
+            $locales_map[$code] = $locale['native_name'];
+        }
+
+        return $locales_map;
+    }
 }

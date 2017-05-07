@@ -10,6 +10,18 @@ class Ent {
     protected static $vc;
     protected static $widgets;
 
+    public static function handle($route, $cb) {
+        self::$router->handle($route, $cb);
+    }
+
+    public static function handle_request() {
+        self::$router->handle_request();
+    }
+
+    public static function i18n() {
+        return self::$i18n;
+    }    
+
     public static function init($theme_dir, $config) {
         // Create alias so that Ent class can be accessed typing `Ent::` without namespace backslash
         class_alias(get_class($this), 'Ent');
@@ -25,14 +37,6 @@ class Ent {
         self::init_misc($config);
         self::init_router($theme_dir, $config);
         self::init_theme_options($theme_dir);
-    }
-
-    public static function handle($route, $cb) {
-        self::$router->handle($route, $cb);
-    }
-
-    public static function handle_request() {
-        self::$router->handle_request();
     }
 
     protected static function init_cpts_terms($theme_dir) {
