@@ -16,14 +16,14 @@ class Widget extends CF_Widget {
     }
 
     function front_end($args, $instance) {
-        $reflector = new \ReflectionClass(get_class($this));
-        $template = dirname($reflector->getFileName()) . '/template.twig';
-
-        // Add extra context data
-        $instance = array_merge($instance, $this->get_context_data($instance, $args), ['config' => $args]);
-
         // Render only if it's for all the languages or equals to current locale
         if (empty($instance['_locale']) || $instance['_locale'] == ICL_LANGUAGE_CODE) {
+            $reflector = new \ReflectionClass(get_class($this));
+            $template = dirname($reflector->getFileName()) . '/template.twig';
+
+            // Add extra context data
+            $instance = array_merge($instance, $this->get_context_data($instance, $args), ['config' => $args]);
+
             \Timber::render($template, $instance);
         }
     }
