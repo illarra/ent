@@ -3,7 +3,7 @@ namespace Ent\Widget;
 
 use Carbon_Fields\Field;
 
-class ent_search extends \Ent\Widgets\Widget {
+class Ent_Search extends \Ent\Widgets\Widget {
     protected function get_definition() {
         return [
             'title' => 'Search',
