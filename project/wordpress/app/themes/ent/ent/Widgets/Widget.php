@@ -22,7 +22,7 @@ class Widget extends CF_Widget {
             $template = dirname($reflector->getFileName()) . '/template.twig';
 
             // Add extra context data
-            $instance = array_merge($instance, $this->get_context_data($instance, $args), ['config' => $args]);
+            $instance = array_merge($instance, $this->get_context_data($instance, $args), ['_config' => $args]);
 
             \Timber::render($template, $instance);
         }
