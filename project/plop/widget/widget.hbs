@@ -1,0 +1,21 @@
+<?php
+namespace Ent\Widget;
+
+use Carbon_Fields\Field;
+
+class {{ snakeCase name }} extends \Ent\Widgets\Widget {
+    protected function get_definition() {
+        return [
+            'title' => '{{ titleCase name }}',
+            'description' => '',
+            'fields' => [
+                //Field::make('text', 'title', 'Title'),
+            ],
+        ];
+    }
+
+    protected function get_context_data($fields, $config) {
+        return [
+        ];
+    }
+}
