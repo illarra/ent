@@ -29,9 +29,12 @@
     - [ ] icons: que onda con font-awesome (?)
     - [ ] recent posts
     - [X] search
-    - [ ] terms cloud
+    - [X] terms cloud
     - [ ] terms list
     - [X] text
+    - [ ] twitter
+- [ ] *!*CSS
+- [ ] Traducir labels de wigets
 - [ ] Integrar `CarbonFields/Transformer` (?)
 - [ ] `plop`:
     - template `{{ foo }}` se pierde en el camino

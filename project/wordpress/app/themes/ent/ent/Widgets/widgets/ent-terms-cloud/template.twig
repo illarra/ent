@@ -1,0 +1,9 @@
+{% if taxonomy_exists and terms_cloud|length > 0 %}
+    <div class="ent-widget ent-widget-terms-cloud ent-widget-terms-cloud--{{ taxonomy }}">
+        <ul>
+            {% for term in terms_cloud %}
+                <li>{{ term }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
