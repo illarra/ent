@@ -20,12 +20,12 @@ define('WP_CONTENT_DIR', __DIR__ . '/app');
 define('WP_CONTENT_URL', WP_HOME . '/app');
 
 // DB conection
-define('DB_NAME',     'dbname');
-define('DB_USER',     'dbuser');
-define('DB_PASSWORD', '123');
-define('DB_HOST',     '127.0.0.1');
-define('DB_CHARSET',  'utf8');
-define('DB_COLLATE',  '');
+define('DB_NAME',     $config['DB_NAME']);
+define('DB_USER',     $config['DB_USER']);
+define('DB_PASSWORD', $config['DB_PASSWORD']);
+define('DB_HOST',     $config['DB_HOST']);
+define('DB_CHARSET',  $config['DB_CHARSET']);
+define('DB_COLLATE',  $config['DB_COLLATE']);
 
 // Authentication unique keys and salts
 define('AUTH_KEY',         '9fee305f2d0c7cd194cda2345598e39230af751bed80d28edc5cd0824605b89b');
