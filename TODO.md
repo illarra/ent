@@ -24,10 +24,20 @@
 - [X] *!*Tener la plantilla base twig en Ent
 
 ### Widgets
-- [ ] *!*Convertir los viejos a CarbonFields: icons, search, recent posts, taxonomy list (categories), taxonomy cloud (tags), archives…
-- [ ] *!*Integrar `CarbonFields/Transformer` (?)
-- [ ] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
-    - Edo WPML string i18n plugina instalatu ta fuera, no?
+- [ ] *!*Convertir los viejos a CarbonFields:
+    - [ ] archives: "news archive" enseña listado de "posts"
+    - [ ] icons: que onda con font-awesome (?)
+    - [ ] recent posts
+    - [X] search
+    - [ ] terms cloud
+    - [ ] terms list
+    - [ ] text
+- [ ] Integrar `CarbonFields/Transformer` (?)
+- [ ] `plop`:
+    - template `{{ foo }}` se pierde en el camino
+    - `Proper_Snake_Case` para el nombre de la clase (ver en Infraestructura "añadir properSnakeCase")
+- [X] *!*Limpiar `ent-widget > ent-widget-*` colapsarlo todo a un nivel?
+- [X] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
 
 ### Misc
 - [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
@@ -60,6 +70,7 @@
 
 ### i18n
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
+- [X] *!*Esta cargando bien el array de `$locales`???
 - [X] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
     - Traducir strings de Ent\Router `__()`
 
@@ -98,6 +109,7 @@
 
 ## Infraestructura/Tooling
 - [ ] *!*Que hacer con los salts? Si se regenera `wp-config.php` el login peta? que pasos hay que seguir cuando se empieza un nuevo proyecto?
+- [ ] `plop` añadir helper `properSnakeCase` o ver como se puede concatenar `properCase` y `snakeCase`
 - [ ] Todo tema headers/footers gestionar a traves de Plop? `plop header labcoop` o `plop footer filagulla`
 - [ ] Plops para CPTs de uso habitual: team/staff, noticias, recursos…
 - [ ] `plop component`: generar carpeta y archivos, registrar .scss. Que pregunte si es tipo: normal, container-parent o container-child.

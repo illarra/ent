@@ -1,0 +1,12 @@
+<div class="ent-widget ent-widget-search">            
+    <form role="search" method="get" action="{{ function('esc_url', function('home_url', '/')) }}">
+        <div class="input-group">
+            <input class="ent-widget-search__input input-group-field" type="text" name="s" value="{{ function('get_search_query') }}" {% if show_placeholder_text %}placeholder="{{ __('ent.search.text') }}…"{% endif %}>
+            {% if show_search_button %}
+                <div class="input-group-button">
+                    <button type="submit" class="ent-widget-search__button button"><i class="fa fa-search"></i></button>
+                </div>
+            {% endif %}
+        </div>
+    </form>
+</div>
