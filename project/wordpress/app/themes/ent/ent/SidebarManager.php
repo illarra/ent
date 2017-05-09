@@ -9,8 +9,8 @@ class SidebarManager {
                     register_sidebar([
                         'name'          => $name,
                         'id'            => $id,
-                        'before_widget' => '<div class="ent-widget">',
-                        'after_widget'  => '</div>',
+                        'before_widget' => '',
+                        'after_widget'  => '',
                         'before_title'  => '<h4 class="ent-widget__title">',
                         'after_title'   => '</h4>',
                     ]);
