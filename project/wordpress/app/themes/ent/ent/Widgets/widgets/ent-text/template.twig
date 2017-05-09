@@ -1,7 +1,9 @@
-<div class="ent-widget-text">
-    {% if wpautop == 'yes' %}
-        {{ content|wpautop }}
-    {% else %}
-        {{ content|raw }}
-    {% endif %}
+<div class="ent-widget ent-widget-text">
+    <div class="ent-widget-text__content">
+        {% if wpautop %}
+            {{ content|wpautop }}
+        {% else %}
+            {{ content|raw }}
+        {% endif %}
+    </div>
 </div>

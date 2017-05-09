@@ -31,7 +31,7 @@
     - [X] search
     - [ ] terms cloud
     - [ ] terms list
-    - [ ] text
+    - [X] text
 - [ ] Integrar `CarbonFields/Transformer` (?)
 - [ ] `plop`:
     - template `{{ foo }}` se pierde en el camino

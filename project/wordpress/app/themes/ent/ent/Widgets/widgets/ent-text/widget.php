@@ -16,6 +16,8 @@ class Ent_Text extends \Ent\Widgets\Widget {
     }
 
     protected function get_context_data($fields, $config) {
-        return [];
+        return [
+            'wpautop' => $fields['wpautop'] == 'yes',
+        ];
     }
 }
