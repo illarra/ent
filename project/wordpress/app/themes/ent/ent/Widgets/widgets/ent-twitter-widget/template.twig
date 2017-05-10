@@ -1,0 +1,13 @@
+{% if url is not empty %}
+    <div class="ent-widget ent-widget-twitter-timeline">
+        <a class="twitter-timeline"
+           data-dnt="true"
+           data-lang="{{ locale }}"
+           {% if width %}data-width="{{ width }}"{% endif %}
+           {% if height %}data-height="{{ height }}"{% endif %}
+           {% if theme %}data-theme="{{ theme }}"{% endif %}
+           {% if link_color %}data-link-color="{{ link_color }}"{% endif %}
+           href="{{ url }}">Tweets</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+{% endif %}
