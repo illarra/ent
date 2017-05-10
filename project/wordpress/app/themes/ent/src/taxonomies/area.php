@@ -8,7 +8,7 @@ class Area extends \Ent\Term {
     public static function register() {
         // See: https://codex.wordpress.org/Function_Reference/register_taxonomy#Arguments
         return [
-            'post_types' => ['post', 'article'],
+            'post_types' => ['post', 'news'],
             'labels' => [
                 'name' => 'Àrees',
             ],
