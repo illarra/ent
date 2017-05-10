@@ -21,6 +21,6 @@ class CPT extends Base {
                     remove_post_type_support($id, $feature);
                 }
             }
-        });
+        }, 0);
     }
 }

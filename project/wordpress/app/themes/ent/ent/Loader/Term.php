@@ -11,6 +11,6 @@ class Term extends Base {
             if (!taxonomy_exists($id)) {
                 register_taxonomy($id, $post_types, $definition);
             }
-        });
+        }, 0);
     }
 }
