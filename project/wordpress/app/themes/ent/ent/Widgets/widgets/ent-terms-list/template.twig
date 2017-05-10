@@ -1,0 +1,28 @@
+{% import _self as widget %}
+
+{% macro render_terms(terms, only_root, hierarchical, show_count) %}
+    {% import _self as widget %}
+    {% for term in terms %}
+        <li>
+            <i class="fa fa-tag"></i><a href="{{ function('get_term_link', term) }}">{{ term.name }}</a>
+            {% if show_count %}&nbsp;({{ term.count }}){% endif %}
+
+        {{ not hierarchical ? '</li>' }}
+
+        {% if not only_root and term.children|length > 0 %}
+            {{ hierarchical ? '<ul>' }}
+            {{ widget.render_terms(term.children, only_root, hierarchical, show_count) }}
+            {{ hierarchical ? '</ul>' }}
+        {% endif %}
+
+        {{ hierarchical ? '</li>' }}
+    {% endfor %}
+{% endmacro %}
+
+{% if taxonomy_exists and terms_tree|length > 0 %}
+    <div class="ent-widget ent-widget-terms-list ent-widget-terms-list--{{ taxonomy }}">
+        <ul>
+            {{ widget.render_terms(terms_tree, only_root, hierarchical, show_count) }}
+        </ul>
+    </div>
+{% endif %}
