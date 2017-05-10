@@ -6,12 +6,7 @@ use Carbon_Fields\Field;
 class Ent_Terms_Cloud extends \Ent\Widgets\Widget {
     protected function get_definition() {
         $options = $this->get_taxonomies();
-
-        if (array_key_exists('post_tag', $options)) {
-            $default = 'post_tag';
-        } else {
-            $default = current(array_keys($options));
-        }
+        $default = $this->get_default_taxonomy($options);
 
         return [
             'title' => 'Terms Cloud',
@@ -39,6 +34,14 @@ class Ent_Terms_Cloud extends \Ent\Widgets\Widget {
             'taxonomy_exists' => $taxonomy_exists,
             'terms_cloud'     => $terms_cloud,
         ];
+    }
+
+    protected function get_default_taxonomy($taxonomies) {
+        if (array_key_exists('post_tag', $taxonomies)) {
+            return 'post_tag';
+        } else {
+            return current(array_keys($taxonomies));
+        }
     }
 
     protected function get_taxonomies() {
