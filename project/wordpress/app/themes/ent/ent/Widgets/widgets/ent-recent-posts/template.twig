@@ -1,0 +1,15 @@
+{% if posts|length > 0 %}
+    <div class="ent-widget ent-widget-recent-posts">
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <i class="fa fa-file-o"></i>&nbsp;
+                    <a href="{{ post.link }}">{{ post.title }}</a>
+                    {% if show_date %}
+                        <span class="ent-widget-recent-posts__date">{{ post.date }}</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
