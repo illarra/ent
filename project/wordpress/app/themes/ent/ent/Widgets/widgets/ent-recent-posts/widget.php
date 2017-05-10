@@ -28,7 +28,7 @@ class Ent_Recent_Posts extends \Ent\Widgets\Widget {
         $number = empty($number) ? $this->post_count : (int) $number;
 
         $posts = \Timber::get_posts([
-            'post_type'           => 'news',
+            'post_type'           => $fields['post_type'],
             'posts_per_page'      => $number,
             'no_found_rows'       => true,
             'post_status'         => 'publish',
