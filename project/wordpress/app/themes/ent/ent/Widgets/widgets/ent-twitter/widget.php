@@ -3,15 +3,15 @@ namespace Ent\Widget;
 
 use Carbon_Fields\Field;
 
-class Ent_Twitter_Widget extends \Ent\Widgets\Widget {
+class Ent_Twitter extends \Ent\Widgets\Widget {
     protected function get_definition() {
         return [
-            'title' => 'Twitter Widget',
-            'description' => 'Embed Twitter widget.',
+            'title' => 'Twitter',
+            'description' => 'Twitter embed widget. See: https://publish.twitter.com',
             'fields' => [
                 Field::make('text', 'url', 'Twitter URL'),
                 Field::make('text', 'width', 'Width'),
-                Field::make('text', 'height', 'Height'),
+                Field::make('text', 'height', 'Height')->set_default_value(400),
                 Field::make('color', 'link_color', 'Link color'),
                 Field::make('checkbox', 'use_dark_theme', 'Use dark theme?'),
             ],
