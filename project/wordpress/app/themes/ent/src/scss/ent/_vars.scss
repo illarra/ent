@@ -1,0 +1,27 @@
+// UNIT
+$unit: rem-calc($unit, $font-size);
+$unit-2: $unit * 2;
+$unit-05: $unit / 2;
+$unit-025: $unit / 4;
+
+// HEADING
+// Linear interpolation of font size from P/H6 to H2
+$font-size-gap: $h2-size - $font-size;
+$font-size-step: $font-size-gap / 4;
+
+$h1-size: $h2-size + $font-size-gap;
+$h3-size: $h2-size - $font-size-step;
+$h4-size: $h3-size - $font-size-step;
+$h5-size: $h4-size - $font-size-step;
+$h6-size: $font-size;
+
+$h1-size: rem-calc($h1-size, $font-size);
+$h2-size: rem-calc($h2-size, $font-size);
+$h3-size: rem-calc($h3-size, $font-size);
+$h4-size: rem-calc($h4-size, $font-size);
+$h5-size: rem-calc($h5-size, $font-size);
+$h6-size: rem-calc($h6-size, $font-size);
+
+// SMALL/SMALLER
+$small-size: rem-calc($small-size, $font-size);
+$smaller-size: rem-calc($smaller-size, $font-size);

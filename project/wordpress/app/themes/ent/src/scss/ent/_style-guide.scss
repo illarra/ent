@@ -1,0 +1,22 @@
+.ent-style-guide {}
+
+.ent-style-guide code {
+    color: $primary-color;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.ent-style-note {
+    margin-top: $unit-05;
+    padding: $unit-025;
+    font-size: $small-size;
+    background-color: $light-gray;
+
+    &:before {
+        font-family: FontAwesome;
+        content: '\f121';
+        color: $primary-color;
+        margin-right: 5px;
+    }
+}

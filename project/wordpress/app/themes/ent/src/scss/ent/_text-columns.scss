@@ -1,0 +1,29 @@
+.text-columns {
+    column-gap: $unit;
+}
+
+.text-columns--2 {
+    @include breakpoint(large) {
+        column-count: 2;
+    }
+}
+
+.text-columns--3 {
+    @include breakpoint(medium) {
+        column-count: 2;
+    }
+
+    @include breakpoint(large) {
+        column-count: 3;
+    }
+}
+
+.text-columns--4 {
+    @include breakpoint(medium) {
+        column-count: 3;
+    }
+
+    @include breakpoint(large) {
+        column-count: 4;
+    }
+}

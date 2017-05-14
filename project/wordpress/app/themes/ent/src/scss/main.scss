@@ -1,32 +1,14 @@
 @charset 'utf-8';
 
 @import 'vars';
-@import 'mixins';
-
-@import 'settings/foundation-settings';
-@import 'settings/foundation-components';
-//@import 'settings/munger-settings';
-//@import 'settings/munger-components';
-
-// Font Awesome Path
-$fa-font-path: "fonts";
-@import 'font-awesome';
-
-// Slick Carousel
-//@import 'slick.scss';
-//@import 'slick-theme.scss';
-
-// Magnific Popup
-//@import 'magnific-popup';
+@import 'ent/core';
 
 // General
+@import 'mixins';
 @import 'layout';
 @import 'forms';
 @import 'typography';
-@import 'icons';
 @import 'components';
 
 // Layout
-@import 'layout/blog';
-@import 'layout/contact';
-@import 'layout/team';
+//@import 'layout/...';

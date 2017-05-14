@@ -1,0 +1,29 @@
+html {
+    font-size: $font-size-small;
+
+    @include breakpoint(medium) {
+        font-size: $font-size;
+    }
+}
+
+h6 {
+    font-family: $body-font-family;
+    font-weight: bold;
+}
+
+code {
+    line-height: 1em;
+    font-size: .85em;
+}
+
+p:empty {
+    display: none;
+}
+
+.small {
+    font-size: $small-size;
+}
+
+.smaller {
+    font-size: $smaller-size;
+}

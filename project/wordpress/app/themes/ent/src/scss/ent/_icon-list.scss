@@ -1,0 +1,35 @@
+.icon-list {
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.icon-list--middle .icon-list__entry {
+    align-items: center;
+}
+
+.icon-list__entry {
+    display: flex;
+    margin-bottom: $unit-025 / 2;
+}
+
+.icon-list__icon,
+.icon-list__text {
+    padding-bottom: $unit-025 / 2;
+    line-height: 1.25;
+
+    &:last-child {
+        padding-bottom: none;
+        margin-bottom: none;
+    }
+}
+
+.icon-list__icon {
+    padding-right: $unit-025;
+}
+
+.icon-list__text {
+    flex: 1 1 auto;
+}

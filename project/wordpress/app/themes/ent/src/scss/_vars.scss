@@ -1,4 +1,14 @@
 $unit: 40px;
-$unit-2: $unit * 2;
-$unit-05: $unit / 2;
-$unit-025: $unit / 4;
+
+$font-size: 17px;
+$font-size-small: 15.5px;
+$h2-size: 36px;
+$small-size: 15px;
+$smaller-size: 13px;
+
+$subtle-darken: 10%;
+$subtle-lighten: 10%;
+
+$z-index: (
+    //el: 10,
+);

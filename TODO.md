@@ -1,11 +1,8 @@
 # TODO
 
-## Ent library (php)
+## Ent library
 ### Templates, macros & hooks (twig)
-- [X] *!*Home (blog index)
-- [X] *!*Front page
-- [X] *!*404
-- [ ] *!*Archive:
+- [ ] *!* Archive:
     - Title de content: primero calcular el string, guardarlo (set), y despues añadir un bloque con el html
     - [ ] search
     - [ ] year
@@ -14,38 +11,69 @@
     - [ ] author
     - [ ] term: category, tags, x…
     - [ ] post-type
-- [ ] *!*Single (post view)
-- [X] *!*Single (page)
+- [ ] *!* Single (post view)
+- [X] *!* Single (page)
+- [X] *!* Home (blog index)
+- [X] *!* Front page
+- [X] *!* 404
 
-- [ ] *!*Timber twig `|resize` no funciona…
-- [ ] *!*Tipos de cabecera (munger)
+- [ ] *!* Timber twig `|resize` no funciona…
+- [ ] *!* Tipos de cabecera (munger)
     - Twig include + blocks?? :-/
-- [ ] *!*Tipos de footer (munger)
-- [X] *!*Tener la plantilla base twig en Ent
+- [ ] *!* Tipos de footer (munger)
 
 ### Widgets
-- [ ] *!*Convertir los viejos a CarbonFields:
-    - [ ] archives: "news archive" enseña listado de "posts"
-    - [ ] icons: que onda con font-awesome (?)
+- [ ] *!* CSS
+    - [ ] archives
+    - [ ] icons
     - [ ] recent posts
-    - [X] search
-    - [X] terms cloud
+    - [ ] search
+    - [ ] terms cloud
     - [ ] terms list
-    - [X] text
-    - [ ] twitter
-- [ ] *!*CSS
+    - [ ] text
+
+### Misc
+- [ ] *!* Instalar: un plugin bueno para compartir en redes sociales
+- [ ] *!* Check si soil esta funcionando bien
+- [ ] *!* Instalar: plugin bueno para gestionar archivos media de WP
+
+---
+
+## Munger
+- [X] *!* unit
+- [X] *!* headings: P/H6 -> H2
+- [ ] *!* fixed
+- [X] *!* icon-list
+- [ ] *!* icon-bar
+- [ ] *!* anchor
+- [X] *!* small/smaller
+- [ ] *!* boxed
+- [ ] *!* edge-image
+- [X] *!* text-columns
+
+---
+
+## Infraestructura/Tooling
+- [ ] *!* Que hacer con los salts? Si se regenera `wp-config.php` el login peta? que pasos hay que seguir cuando se empieza un nuevo proyecto?
+    - Añadir un script `init-project` que regenere wp-config y actualice la contraseña del usuario??
+
+-------
+-------
+-------
+-------
+
+## Ent library (php)
+### Templates, macros & hooks (twig)
+- ...
+
+### Widgets
 - [ ] Traducir labels de wigets
 - [ ] Integrar `CarbonFields/Transformer` (?)
 - [ ] `plop`:
     - template `{{ foo }}` se pierde en el camino
     - `Proper_Snake_Case` para el nombre de la clase (ver en Infraestructura "añadir properSnakeCase")
-- [X] *!*Limpiar `ent-widget > ent-widget-*` colapsarlo todo a un nivel?
-- [X] *!*Crear widget básicos utilizando CarbonFields, que ya tengan en cuenta el idioma
 
 ### Misc
-- [ ] *!*Instalar: un plugin bueno para compartir en redes sociales
-- [ ] *!*Check si soil esta funcionando bien
-- [ ] *!*Instalar: plugin bueno para gestionar archivos media de WP
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
 - [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
@@ -55,27 +83,18 @@
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
-- [X] *!*Analytics mediante Ent
-- [X] *!*`config.php` timezone fuera, poner como opcional…
-- [X] *!*Opciones a nivel de theme con CarbonFields, como gestionar? `src/theme-options.php`?
-- [X] *!*Instalar: the seo framework y solucionar gestion de títulos
 
 ### Post/Terms
 - [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
     - https://github.com/timber/timber/issues/1399
-- [X] *!*Terms `register()`
-- [X] *!*Gestion de custom fields + `CarbonFields/Transformer`
-- [X] *!*EntField::media => media_gallery? :-/
+- [ ] Archive para CPTs, integrar con Ent_Archives widget.
+    - http://stackoverflow.com/questions/23386709/date-archives-for-custom-post-type
 
 ### Router
-- [X] *!*Route handler, que no tenga que crear un “home.php” y copiar toda la movida de $context por que quiero simplemente añadir una propiedad (ver Fil a l’afulla “home.php”).
-    - http://framework.themosis.com/docs/1.3/routing/
+- ...
 
 ### i18n
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
-- [X] *!*Esta cargando bien el array de `$locales`???
-- [X] *!*Añadir traducciones YAML a nivel de Ent con namespace `ent.*`
-    - Traducir strings de Ent\Router `__()`
 
 ### Forms
 - [ ] Formularios: gravity forms?
@@ -90,7 +109,6 @@
 - [ ] Listado con filtros (ent component edo base class con plop y toda la movida)
 - [ ] VisualComposer <section><section class="image-intro">... basurilla hobetzia baziok?
 - [ ] Componente Widget area (eg: para poner contenido de footer en cualquier otro sitio, ej: “contact”)
-- [X] *!*No se esta cargando en las páginas.
 
 ---
 
@@ -104,17 +122,15 @@
 ---
 
 ## Munger
-- [ ] *!*Volver a $padding vs `mu-with-gutter-size`. Cambiar nombres: `$unit`, `$unit-05`, `$unit-025` y `$unit-2`. Montarlo utilizando `rem`s, y que lo único que cambie entre small, medium y large sea el tamaño de fuente del body.
-- [ ] *!*Gestionar mejor tema escala tipográfica (modular scale). Ahora es un poco caos. Foundation da un notice: "$header-sizes has been replaced with $header-styles", ver si ahora esta mejor solucionado.
-- [ ] *!*Que hacer con Munger? Vamos a seguir utilizando Bolt y Silex… asi que…
+- ...
 
 ---
 
 ## Infraestructura/Tooling
-- [ ] *!*Que hacer con los salts? Si se regenera `wp-config.php` el login peta? que pasos hay que seguir cuando se empieza un nuevo proyecto?
 - [ ] `plop` añadir helper `properSnakeCase` o ver como se puede concatenar `properCase` y `snakeCase`
 - [ ] Todo tema headers/footers gestionar a traves de Plop? `plop header labcoop` o `plop footer filagulla`
 - [ ] Plops para CPTs de uso habitual: team/staff, noticias, recursos…
+- [ ] inquirer-recursive: https://www.npmjs.com/package/inquirer-recursive
 - [ ] `plop component`: generar carpeta y archivos, registrar .scss. Que pregunte si es tipo: normal, container-parent o container-child.
 - [ ] `plop component-tpl`
     - generar `twig` y `admin.html`. Detectar el listado de parametros, basandonos en el tipo de cada parametro generar el código que toca (imagen, link, texto…). Molaria que tambien mire `get_context_data` para por lo menos saber que otras variables hay. Si es plural `resources` que genere un `{% for %}`

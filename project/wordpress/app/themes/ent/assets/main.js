@@ -116,6 +116,7 @@
 
 (function() {
 var global = typeof window === 'undefined' ? this : window;
+var process;
 var __makeRelativeRequire = function(require, mappings, pref) {
   var none = {};
   var tryReq = function(name, pref) {
@@ -151,7 +152,7 @@ require.register("main.js", function(exports, require, module) {
 var $ = require('jquery');
 
 require('magnific-popup');
-//require('munger');
+require('slick-carousel');
 require('foundation-sites');
 
 $(function () {
@@ -161,12 +162,6 @@ $(function () {
     // Unorphan en medium o más
     if (Foundation.MediaQuery.atLeast('medium')) {
         unorphan($('h1, h2, h3, h4, blockquote, [data-unorphan]').not('[data-dont-unorphan]'));
-    }
-
-    // Resources
-    if (!!$('[data-res-view]').length) {
-        console.log('whatever');
-        //require('js/resources.js');
     }
 
     require('test.js');
@@ -179,7 +174,7 @@ console.log('test file');
 
 });
 
-require.register("___globals___", function(exports, require, module) {
+require.alias("process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
   
 
 // Auto-loaded modules from config.npm.globals.
@@ -189,3 +184,5 @@ window.unorphan = require("unorphan");
 
 });})();require('___globals___');
 
+
+//# sourceMappingURL=main.js.map

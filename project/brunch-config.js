@@ -56,11 +56,7 @@ module.exports = {
                 includePaths: [
                     'node_modules/font-awesome/scss',
                     'node_modules/foundation-sites/scss',
-                    //'node_modules/munger/src/scss',
-                    //'node_modules/munger/node_modules/slick-carousel/slick',
-                    //'node_modules/munger/node_modules/magnific-popup/dist',
-                    //'node_modules/motion-ui/src',
-                    //'node_modules/selectize/dist/css',
+                    'node_modules',
                 ]
             }
         },
@@ -70,10 +66,18 @@ module.exports = {
                 require('csswring'),
             ]
         },
-        //browserSync: {
-        //    port: 3333,
-        //    proxy: '0.0.0.0:1342',
-        //    logLevel: "debug"
-        //}
+        uglify: {
+            mangle: true,
+            compress: {
+                global_defs: {
+                    DEBUG: false
+                }
+            }
+        },
+        browserSync: {
+            port: 3333,
+            proxy: 'apostrof-wordpress.dev',
+            logLevel: 'debug'
+        }
     }
 };
