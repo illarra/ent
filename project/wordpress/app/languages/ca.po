@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-03-05 11:34:47+0000\n"
+"PO-Revision-Date: 2017-05-12 09:29:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4433,7 +4433,7 @@ msgstr "Disponibles"
 #: wp-includes/l10n.php:1191
 msgctxt "translations"
 msgid "Installed"
-msgstr "Instal·lades"
+msgstr "Instal·lats"
 
 #: wp-includes/class-wp-editor.php:1053
 msgid "No alignment"
