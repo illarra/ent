@@ -5522,11 +5522,12 @@ p:empty {
   .text-columns--4 {
     column-count: 4; } }
 
-.ent-style-guide code {
+.ent-style-guide code, .ent-style-guide pre {
   color: #1779ba;
   border: none;
   background-color: transparent;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.88235rem; }
 
 .ent-style-note {
   margin-top: 1.17647rem;

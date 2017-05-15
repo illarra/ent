@@ -1,10 +1,11 @@
 .ent-style-guide {}
 
-.ent-style-guide code {
+.ent-style-guide code, .ent-style-guide pre {
     color: $primary-color;
     border: none;
     background-color: transparent;
     font-weight: bold;
+    font-size: $small-size;
 }
 
 .ent-style-note {

@@ -99,5 +99,23 @@
                 </ul>
             </div>
         </div>
+
+        <hr/>
+
+        <h6>z-index</h6>
+        <p>Define the z-index in <code>scss/_vars.scss</code>:</p>
+        <pre>
+$z-index: (
+    foo: 10,
+    bar: 1,
+);
+        </pre>
+        <p>Then use <code>z-index</code> function to get the value:</p>
+        <pre>
+.foo {
+    z-index: z-index(foo);
+}
+        </pre>
+
     </div>
 </div>
