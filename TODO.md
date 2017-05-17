@@ -20,6 +20,7 @@
 - [ ] *!* Timber twig `|resize` no funciona…
 - [ ] *!* Tipos de cabecera (munger)
     - Twig include + blocks?? :-/
+    - Logo, ratio y height por ancho
 - [ ] *!* Tipos de footer (munger)
 
 ### Widgets
@@ -40,16 +41,22 @@
 ---
 
 ## Munger
-- [X] *!* unit
+- [ ] *!* unit
 - [X] *!* headings: P/H6 -> H2
 - [ ] *!* fixed
+- [ ] *!* bg
 - [X] *!* icon-list
 - [ ] *!* icon-bar
 - [ ] *!* anchor
 - [X] *!* small/smaller
-- [ ] *!* boxed
-- [ ] *!* edge-image
+- [X] *!* boxed
+- [X] *!* edge-image
 - [X] *!* text-columns
+- [X] *!* z-index
+- [ ] heading with bezier-curves
+    - Ona dek hau: http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/
+    - http://stackoverflow.com/questions/7348009/y-coordinate-for-a-given-x-cubic-bezier
+    - http://thesassway.com/advanced/cubic-bezier-representation-in-sass
 
 ---
 

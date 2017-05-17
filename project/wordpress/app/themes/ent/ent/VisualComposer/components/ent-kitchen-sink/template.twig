@@ -1,121 +1,218 @@
-<div class="row">
-    <div class="small-12 columns ent-style-guide">
-        <h6>Headings</h6>
-        <h2>Lorem ipsum dolor <code>h2</code></h2>
-        <h3>Lorem ipsum dolor <code>h3</code></h3>
-        <h4>Lorem ipsum dolor <code>h4</code></h4>
-        <h5>Lorem ipsum dolor <code>h5</code></h5>
-        <h6>Lorem ipsum dolor <code>h6</code></h6>
-        <div class="ent-style-note">
-            Sass variables: <code>$h2-size</code>, <code>$h3-size</code>, <code>$h4-size</code>, <code>$h5-size</code> and <code>$h6-size</code>.
+{% import _self as fn %}
+
+{% macro columns_template() %}
+    <div class="row show-for-medium">
+        {% for i in 1..12 %}
+            <div class="small-12 medium-1 columns">
+                <div class="ent-style-column"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+<div class="ent-style-guide">
+    <div class="row">
+        <div class="small-12 columns">
+            <h6>Headings</h6>
+            <h2>Lorem ipsum dolor <code>h2</code></h2>
+            <h3>Lorem ipsum dolor <code>h3</code></h3>
+            <h4>Lorem ipsum dolor <code>h4</code></h4>
+            <h5>Lorem ipsum dolor <code>h5</code></h5>
+            <h6>Lorem ipsum dolor <code>h6</code></h6>
+            <div class="ent-style-note">
+                Sass variables: <code>$h2-size</code>, <code>$h3-size</code>, <code>$h4-size</code>, <code>$h5-size</code> and <code>$h6-size</code>. <code>h6</code> equals to <code>$font-size</code>.
+            </div>
+
+            <hr/>
+
+            <h6>Small &amp; smaller</h6>
+            <p class="small"><code>.small</code> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</p>
+            <p class="smaller"><code>.smaller</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis.</p>
+            <div class="ent-style-note">
+                Sass variables: <code>$small-size</code> and <code>$smaller-size</code>.
+            </div>
+
+            <hr/>
+
+            <h6>HTML elements</h6>
+            <p><code>p</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin. Phasellus et nisi eleifend, rhoncus ante et, consectetur urna. Sed congue sapien sed volutpat sagittis. In in faucibus orci. Suspendisse eros nibh, posuere ut risus ut, maximus bibendum mi.</p>
+            <div class="ent-style-note">
+                Sass variables: use <code>1rem</code> for the base font-size.
+            </div>
+
+            <hr/>
+
+            <h6>Text columns</h6>
+            <p class="text-columns text-columns--2"><code>.text-columns.text-columns--2</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+            {{ fn.columns_template() }}
+            <p class="text-columns text-columns--3"><code>.text-columns.text-columns--3</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+            {{ fn.columns_template() }}
+            <p class="text-columns text-columns--4"><code>.text-columns.text-columns--4</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+
+            <hr/>
+
+            <h6>Icon list</h6>
+            <div class="row">
+                <div class="small-12 medium-6 columns">
+                    <p><code>.icon-list</code></p>
+                    <ul class="icon-list">
+                        <li>
+                            <a href="#" class="icon-list__entry">
+                                <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
+                                <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
+                            </a>
+                        </li>
+                        <li class="icon-list__entry">
+                            <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
+                            <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <p><code>.icon-list.icon-list--middle</code></p>
+                    <ul class="icon-list icon-list--middle">
+                        <li>
+                            <a href="#" class="icon-list__entry">
+                                <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
+                                <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
+                            </a>
+                        </li>
+                        <li class="icon-list__entry">
+                            <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
+                            <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <p><code>.small.icon-list</code></p>
+                    <ul class="icon-list small">
+                        <li>
+                            <a href="#" class="icon-list__entry">
+                                <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
+                                <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
+                            </a>
+                        </li>
+                        <li class="icon-list__entry">
+                            <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
+                            <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <p><code>.smaller.icon-list.icon-list--middle</code></p>
+                    <ul class="icon-list icon-list--middle smaller">
+                        <li>
+                            <a href="#" class="icon-list__entry">
+                                <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
+                                <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
+                            </a>
+                        </li>
+                        <li class="icon-list__entry">
+                            <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
+                            <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr/>
+
+            <h6>Background</h6>
+
+            <hr/>
+
+            <h6>Boxed section</h6>
+            <div class="boxed bg-light-gray">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <p><code>.row > .small-12.columns > .boxed > .row > .small-12.columns</code></p>
+                        <p>In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+                    </div>
+                </div>
+            </div>
+            {{ fn.columns_template() }}
+            <div class="row">
+                <div class="small-12 medium-6 columns">
+                    <div class="boxed bg-light-gray">
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <p>In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <div class="boxed">
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <p>In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ fn.columns_template() }}
         </div>
-
-        <hr/>
-
-        <h6>HTML elements</h6>
-        <p><code>p</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin. Phasellus et nisi eleifend, rhoncus ante et, consectetur urna. Sed congue sapien sed volutpat sagittis. In in faucibus orci. Suspendisse eros nibh, posuere ut risus ut, maximus bibendum mi.</p>
-        <div class="ent-style-note">
-            Sass variables: use <code>1rem</code> for the base font-size.
-        </div>
-
-        <hr/>
-
-        <h6>Small &amp; smaller</h6>
-        <p class="small"><code>.small</code> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</p>
-        <p class="smaller"><code>.smaller</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis.</p>
-        <div class="ent-style-note">
-            Sass variables: <code>$small-size</code> and <code>$smaller-size</code>.
-        </div>
-
-        <hr/>
-
-        <h6>Text columns</h6>
-        <p class="text-columns text-columns--2"><code>.text-columns.text-columns--2</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
-        <p class="text-columns text-columns--3"><code>.text-columns.text-columns--3</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
-        <p class="text-columns text-columns--4"><code>.text-columns.text-columns--4</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
-
-        <hr/>
-
-        <h6>Icon list</h6>
+    </div>
+    <section class="boxed bg-light-gray">
         <div class="row">
-            <div class="small-12 medium-6 columns">
-                <p><code>.icon-list</code></p>
-                <ul class="icon-list">
-                    <li>
-                        <a href="#" class="icon-list__entry">
-                            <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
-                            <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
-                        </a>
-                    </li>
-                    <li class="icon-list__entry">
-                        <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
-                        <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="small-12 medium-6 columns">
-                <p><code>.icon-list.icon-list--middle</code></p>
-                <ul class="icon-list icon-list--middle">
-                    <li>
-                        <a href="#" class="icon-list__entry">
-                            <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
-                            <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
-                        </a>
-                    </li>
-                    <li class="icon-list__entry">
-                        <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
-                        <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="small-12 medium-6 columns">
-                <p><code>.small.icon-list</code></p>
-                <ul class="icon-list small">
-                    <li>
-                        <a href="#" class="icon-list__entry">
-                            <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
-                            <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
-                        </a>
-                    </li>
-                    <li class="icon-list__entry">
-                        <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
-                        <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="small-12 medium-6 columns">
-                <p><code>.smaller.icon-list.icon-list--middle</code></p>
-                <ul class="icon-list icon-list--middle smaller">
-                    <li>
-                        <a href="#" class="icon-list__entry">
-                            <span class="icon-list__icon"><i class="fa fa-fw fa-umbrella"></i></span>
-                            <span class="icon-list__text">Lorem ipsum dolor sit amet.</span>
-                        </a>
-                    </li>
-                    <li class="icon-list__entry">
-                        <span class="icon-list__icon"><i class="fa fa-fw fa-cutlery"></i></span>
-                        <span class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a malesuada orci, a dignissim neque.</span>
-                    </li>
-                </ul>
+            <div class="small-12 columns ent-style-guide">
+                <p><code>section.boxed > .row > .small-12.columns</code></p>
+                <p>In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin.</p>
             </div>
         </div>
+    </section>
+    <div class="row">
+        <div class="small-12 columns">
+            <hr/>
+            <h6>Edge image section</h6>
+        </div>
+    </div>
+    <section class="edge-image edge-image--left bg-light-gray">
+        <div class="row expanded edge-image__image-wrapper">
+            <div class="large-5 medium-7 columns edge-image__image" style='background-image: url(http://apostrof-wordpress.dev/app/uploads/2017/04/bg-great-wave.jpg);'></div>
+        </div>
+        <div class="row">
+            <div class="medium-6 medium-offset-6 large-8 large-offset-4 columns edge-image__content bg-light-gray">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="small-12 columns">
+            {{ fn.columns_template() }}
+        </div>
+    </div>
+    <section class="edge-image edge-image--right bg-light-gray">
+        <div class="row expanded edge-image__image-wrapper">
+            <div class="large-5 large-offset-7 medium-7 medium-offset-5 columns edge-image__image" style='background-image: url(http://apostrof-wordpress.dev/app/uploads/2017/04/bg-great-wave.jpg);'></div>
+        </div>
+        <div class="row">
+            <div class="medium-6 large-8 columns edge-image__content bg-light-gray">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    <div class="row">
+        <div class="small-12 columns">
+            <hr>
+            <h6>unit</h6>
 
-        <hr/>
-
-        <h6>z-index</h6>
-        <p>Define the z-index in <code>scss/_vars.scss</code>:</p>
-        <pre>
+            <hr>
+            <h6>z-index</h6>
+            <p>Define the z-index in <code>scss/_vars.scss</code>:</p>
+            <pre>
 $z-index: (
     foo: 10,
     bar: 1,
 );
-        </pre>
-        <p>Then use <code>z-index</code> function to get the value:</p>
-        <pre>
+            </pre>
+            <p>Then use <code>z-index</code> function to get the value:</p>
+            <pre>
 .foo {
     z-index: z-index(foo);
 }
-        </pre>
+            </pre>
 
+        </div>
     </div>
 </div>

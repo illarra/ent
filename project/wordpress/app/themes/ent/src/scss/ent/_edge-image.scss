@@ -1,0 +1,52 @@
+.edge-image {
+    position: relative;
+}
+
+.edge-image--left {}
+.edge-image--right {}
+
+.edge-image__image-wrapper {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    z-index: 0;
+
+    @include breakpoint(medium) {
+        position: absolute;
+        height: 100%;
+    }
+}
+
+.edge-image__image {
+    height: 100%;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.edge-image__content {
+    position: relative;
+    padding-top: $unit-05;
+    padding-bottom: $unit-05;
+}
+
+@include breakpoint(medium) {
+    .edge-image--left .edge-image__content:before,
+    .edge-image--right .edge-image__content:after {
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: inherit;
+        width: $unit-05;
+    }
+
+    .edge-image--left .edge-image__content:before {
+        left: -$unit-05;
+    }
+
+    .edge-image--right .edge-image__content:after {
+        right: -$unit-05;
+    }
+}

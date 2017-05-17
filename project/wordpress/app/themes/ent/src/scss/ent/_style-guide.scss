@@ -1,11 +1,27 @@
 .ent-style-guide {}
 
+.ent-style-column {
+    width: 100%;
+    height: 3px;
+    background-color: $light-gray;
+    margin: $unit-025 0;
+}
+
 .ent-style-guide code, .ent-style-guide pre {
     color: $primary-color;
     border: none;
     background-color: transparent;
     font-weight: bold;
     font-size: $small-size;
+}
+
+.ent-style-guide .boxed p,
+.ent-style-guide .edge-image p {
+    text-align: justify;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .ent-style-note {

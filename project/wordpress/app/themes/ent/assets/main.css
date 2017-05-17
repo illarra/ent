@@ -1179,31 +1179,31 @@ h6 {
     color: #cacaca; }
 
 h1 {
-  font-size: 3.23529rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2 {
-  font-size: 2.11765rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3 {
-  font-size: 1.83824rem;
+  font-size: 1.675rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4 {
-  font-size: 1.55882rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5 {
-  font-size: 1.27941rem;
+  font-size: 1.175rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -1216,15 +1216,15 @@ h6 {
 
 @media print, screen and (min-width: 40em) {
   h1 {
-    font-size: 3.23529rem; }
+    font-size: 2rem; }
   h2 {
-    font-size: 2.11765rem; }
+    font-size: 2rem; }
   h3 {
-    font-size: 1.83824rem; }
+    font-size: 1.675rem; }
   h4 {
-    font-size: 1.55882rem; }
+    font-size: 1.4rem; }
   h5 {
-    font-size: 1.27941rem; }
+    font-size: 1.175rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -5449,28 +5449,67 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-html {
-  font-size: 15.5px; }
+.bg-light-gray {
+  background-color: #e6e6e6; }
+
+.bg-medium-gray {
+  background-color: #cacaca; }
+
+.bg-dard-gray {
+  background-color: #8a8a8a; }
+
+.boxed {
+  width: auto;
+  margin: 0 auto;
+  padding: 1.17647rem 0; }
+  @media screen and (min-width: 67.05882em) {
+    .boxed {
+      width: 64.70588rem; } }
+
+.column .boxed, .columns .boxed, .columns .boxed {
+  width: auto;
+  margin: 0 -1.17647rem;
+  padding-left: 1.17647rem;
+  padding-right: 1.17647rem; }
+
+.edge-image {
+  position: relative; }
+
+.edge-image__image-wrapper {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  z-index: 0; }
   @media print, screen and (min-width: 40em) {
-    html {
-      font-size: 17px; } }
+    .edge-image__image-wrapper {
+      position: absolute;
+      height: 100%; } }
 
-h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: bold; }
+.edge-image__image {
+  height: 100%;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-code {
-  line-height: 1em;
-  font-size: .85em; }
+.edge-image__content {
+  position: relative;
+  padding-top: 1.17647rem;
+  padding-bottom: 1.17647rem; }
 
-p:empty {
-  display: none; }
-
-.small {
-  font-size: 0.88235rem; }
-
-.smaller {
-  font-size: 0.76471rem; }
+@media print, screen and (min-width: 40em) {
+  .edge-image--left .edge-image__content:before,
+  .edge-image--right .edge-image__content:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: inherit;
+    width: 1.17647rem; }
+  .edge-image--left .edge-image__content:before {
+    left: -1.17647rem; }
+  .edge-image--right .edge-image__content:after {
+    right: -1.17647rem; } }
 
 .icon-list {
   margin: 0; }
@@ -5499,6 +5538,37 @@ p:empty {
 .icon-list__text {
   flex: 1 1 auto; }
 
+.ent-style-column {
+  width: 100%;
+  height: 3px;
+  background-color: #e6e6e6;
+  margin: 0.58824rem 0; }
+
+.ent-style-guide code, .ent-style-guide pre {
+  color: #1779ba;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 0.88235rem; }
+
+.ent-style-guide .boxed p,
+.ent-style-guide .edge-image p {
+  text-align: justify; }
+  .ent-style-guide .boxed p:last-child,
+  .ent-style-guide .edge-image p:last-child {
+    margin-bottom: 0; }
+
+.ent-style-note {
+  margin-top: 1.17647rem;
+  padding: 0.58824rem;
+  font-size: 0.88235rem;
+  background-color: #e6e6e6; }
+  .ent-style-note:before {
+    font-family: FontAwesome;
+    content: '\f121';
+    color: #1779ba;
+    margin-right: 5px; }
+
 .text-columns {
   column-gap: 2.35294rem; }
 
@@ -5522,23 +5592,28 @@ p:empty {
   .text-columns--4 {
     column-count: 4; } }
 
-.ent-style-guide code, .ent-style-guide pre {
-  color: #1779ba;
-  border: none;
-  background-color: transparent;
-  font-weight: bold;
+html {
+  font-size: 15.5px; }
+  @media print, screen and (min-width: 40em) {
+    html {
+      font-size: 17px; } }
+
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: bold; }
+
+code {
+  line-height: 1em;
+  font-size: .85em; }
+
+p:empty {
+  display: none; }
+
+.small {
   font-size: 0.88235rem; }
 
-.ent-style-note {
-  margin-top: 1.17647rem;
-  padding: 0.58824rem;
-  font-size: 0.88235rem;
-  background-color: #e6e6e6; }
-  .ent-style-note:before {
-    font-family: FontAwesome;
-    content: '\f121';
-    color: #1779ba;
-    margin-right: 5px; }
+.smaller {
+  font-size: 0.76471rem; }
 
 
 

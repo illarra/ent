@@ -1,0 +1,18 @@
+.boxed {
+    $width: $global-width;
+
+    width: auto;
+    margin: 0 auto;
+    padding: $unit-05 0;
+
+    @include breakpoint($width + $unit) {
+        width: $global-width;
+    }
+}
+
+.column .boxed, .columns .boxed {
+    width: auto;
+    margin: 0 (-$unit-05);
+    padding-left: $unit-05;
+    padding-right: $unit-05;
+}

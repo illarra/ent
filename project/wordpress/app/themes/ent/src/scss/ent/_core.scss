@@ -2,8 +2,8 @@
 @import 'util/util';
 
 // Ent (PRE)
-@import 'vars';
 @import 'mixins';
+@import 'vars';
 
 // Foundation
 @import '../settings/foundation-settings';
@@ -23,7 +23,10 @@ $fa-font-path: "fonts";
 @import 'magnific-popup/src/css/main';
 
 // Ent (POST)
-@import 'typography';
+@import 'bg';
+@import 'boxed';
+@import 'edge-image';
 @import 'icon-list';
-@import 'text-columns';
 @import 'style-guide';
+@import 'text-columns';
+@import 'typography';

@@ -5,14 +5,18 @@ $unit-05: $unit / 2;
 $unit-025: $unit / 4;
 
 // HEADING
-// Linear interpolation of font size from P/H6 to H2
-$font-size-gap: $h2-size - $font-size;
-$font-size-step: $font-size-gap / 4;
+// Ease-in transition from $font-size to $h2-size
+@function ease-in($t) {
+    // 60% linear, 40% quadratic
+    @return ($t * 0.6) + ($t * $t * 0.4);
+}
 
-$h1-size: $h2-size + $font-size-gap;
-$h3-size: $h2-size - $font-size-step;
-$h4-size: $h3-size - $font-size-step;
-$h5-size: $h4-size - $font-size-step;
+$font-size-diff: $h2-size - $font-size;
+
+$h1-size: $h2-size;
+$h3-size: $font-size + $font-size-diff * ease-in(.75);
+$h4-size: $font-size + $font-size-diff * ease-in(.5);
+$h5-size: $font-size + $font-size-diff * ease-in(.25);
 $h6-size: $font-size;
 
 $h1-size: rem-calc($h1-size, $font-size);
