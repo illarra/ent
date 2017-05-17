@@ -40,25 +40,21 @@
 
 ---
 
-## Munger
-- [ ] *!* unit
-- [X] *!* headings: P/H6 -> H2
+## Munger/Style Guide
 - [ ] *!* fixed
-- [X] *!* bg
-- [X] *!* icon-list
 - [ ] *!* icon-bar
 - [ ] *!* anchor
+- [ ] *!* slick
+- [ ] *!* magnific-popup
+- [X] *!* unit
+- [X] *!* headings: P/H6 -> H2
+- [X] *!* bg
+- [X] *!* icon-list
 - [X] *!* small/smaller
 - [X] *!* boxed
 - [X] *!* edge-image
 - [X] *!* text-columns
 - [X] *!* z-index
-- [ ] *!* slick
-- [ ] *!* magnific-popup
-- [ ] heading with bezier-curves
-    - Ona dek hau: http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/
-    - http://stackoverflow.com/questions/7348009/y-coordinate-for-a-given-x-cubic-bezier
-    - http://thesassway.com/advanced/cubic-bezier-representation-in-sass
 
 ---
 

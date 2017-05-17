@@ -35,6 +35,7 @@
             <hr/>
 
             <h6>HTML elements</h6>
+            <p class="lead"><code>p.lead</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam.</p>
             <p><code>p</code> In a lobortis enim. Sed nec nibh et lorem molestie suscipit. Cras sem tortor, bibendum a vestibulum sagittis, molestie eu justo. Quisque ut nibh non lectus consequat tempor ac in quam. Vivamus malesuada porta sapien eu lacinia. Donec feugiat tincidunt nulla non sollicitudin. Phasellus et nisi eleifend, rhoncus ante et, consectetur urna. Sed congue sapien sed volutpat sagittis. In in faucibus orci. Suspendisse eros nibh, posuere ut risus ut, maximus bibendum mi.</p>
             <div class="ent-style-note">
                 Sass variables: use <code>1rem</code> for the base font-size.
@@ -117,21 +118,66 @@
 
             <hr/>
 
+            <h6>Foundation palette</h6>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box ent-style-box--primary">
+                        <span class="small">$primary-color</span>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box ent-style-box--secondary">
+                        <span class="small">$secondary-color</span>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box ent-style-box--black">
+                        <span class="small">$black</span>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box ent-style-box--white">
+                        <span class="small">$white</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row align-center">
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box bg--light-gray">
+                        <span class="small">$light-gray</span>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box bg--medium-gray">
+                        <span class="small">$medium-gray</span>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <div class="ent-style-box bg--dark-gray">
+                        <span class="small">$dark-gray</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
             <h6>Background</h6>
             <div class="row">
                 <div class="small-12 medium-4 columns">
                     <div class="ent-style-box bg--light-gray">
-                        <span class="small"><code>.bg--light-gray</code></span>
+                        <span class="small">.bg--light-gray</span>
                     </div>
                 </div>
                 <div class="small-12 medium-4 columns">
                     <div class="ent-style-box bg--medium-gray">
-                        <span class="small"><code>.bg--medium-gray</code></span>
+                        <span class="small">.bg--medium-gray</span>
                     </div>
                 </div>
                 <div class="small-12 medium-4 columns">
                     <div class="ent-style-box bg--dark-gray">
-                        <span class="small"><code>.bg--dark-gray</code></span>
+                        <span class="small">.bg--dark-gray</span>
                     </div>
                 </div>
             </div>
@@ -213,6 +259,14 @@
         <div class="small-12 columns">
             <hr>
             <h6>unit</h6>
+
+            <p>Use following SASS vars for margin, paddings…</p>
+            <ul>
+                <li><code>$unit</code> (equals to column gutter)</li>
+                <li><code>$unit-05</code> (half)</li>
+                <li><code>$unit-025</code> (quarter)</li>
+                <li><code>$unit-2</code> (double)</li>
+            </ul>
 
             <hr>
             <h6>z-index</h6>
