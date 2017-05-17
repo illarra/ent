@@ -44,7 +44,7 @@
 - [ ] *!* unit
 - [X] *!* headings: P/H6 -> H2
 - [ ] *!* fixed
-- [ ] *!* bg
+- [X] *!* bg
 - [X] *!* icon-list
 - [ ] *!* icon-bar
 - [ ] *!* anchor
@@ -53,6 +53,8 @@
 - [X] *!* edge-image
 - [X] *!* text-columns
 - [X] *!* z-index
+- [ ] *!* slick
+- [ ] *!* magnific-popup
 - [ ] heading with bezier-curves
     - Ona dek hau: http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/
     - http://stackoverflow.com/questions/7348009/y-coordinate-for-a-given-x-cubic-bezier
@@ -83,13 +85,13 @@
 ### Misc
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
-- [ ] Tener un /style-guide donde mirar como quedan los diferentes elementos?
 - [ ] Añadir un checklist? Analytics, SEO…
     - Cambiar: `Theme > Analytics ID`
     - Cambiar: `SEO > Home Page Settings > Custom Home Page Title Tagline`
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
+- [X] Tener un /style-guide donde mirar como quedan los diferentes elementos?
 
 ### Post/Terms
 - [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…

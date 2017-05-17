@@ -24,6 +24,15 @@
     }
 }
 
+.ent-style-box {
+    margin: 0 auto;
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ent-style-note {
     margin-top: $unit-05;
     padding: $unit-025;

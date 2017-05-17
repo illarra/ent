@@ -5449,13 +5449,13 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-.bg-light-gray {
+.bg--light-gray {
   background-color: #e6e6e6; }
 
-.bg-medium-gray {
+.bg--medium-gray {
   background-color: #cacaca; }
 
-.bg-dard-gray {
+.bg--dark-gray {
   background-color: #8a8a8a; }
 
 .boxed {
@@ -5557,6 +5557,14 @@ img.mfp-img {
   .ent-style-guide .boxed p:last-child,
   .ent-style-guide .edge-image p:last-child {
     margin-bottom: 0; }
+
+.ent-style-box {
+  margin: 0 auto;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .ent-style-note {
   margin-top: 1.17647rem;
