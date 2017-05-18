@@ -26,7 +26,13 @@ $fa-font-path: "fonts";
 @import 'bg';
 @import 'boxed';
 @import 'edge-image';
+@import 'header-mobile';
 @import 'icon-list';
+@import 'logo';
+@import 'mobile-menu';
 @import 'style-guide';
 @import 'text-columns';
 @import 'typography';
+
+// We want this to have preference over header-mobile
+@import 'fixed';

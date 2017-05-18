@@ -1,15 +1,21 @@
 $unit: 40px;
 
+$logo-image: null;
+$logo-ratio: 3.5; // width / height
+$logo-height-small: 50px;
+$logo-height-medium: 60px;
+$logo-height-large: 70px;
+
+$header-mobile-padding: .25; // in units
+
 $font-size: 17px;
 $font-size-small: 15.5px;
 $h2-size: 34px;
 $small-size: 15px;
 $smaller-size: 13px;
 
-$subtle-darken: 10%;
-$subtle-lighten: 10%;
-
 $z-index: (
-    foo: 10,
-    bar: 1,
+    fixed: 99,
+    header-mobile: 10,
+    mobile-menu: 9,
 );

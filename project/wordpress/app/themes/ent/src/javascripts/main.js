@@ -1,17 +1,8 @@
 var $ = require('jquery');
 
-require('magnific-popup');
-require('slick-carousel');
-require('foundation-sites');
+require('ent/main.js');
 
 $(function () {
-    // Init Foundation
-    $(document).foundation();
-
-    // Unorphan en medium o más
-    if (Foundation.MediaQuery.atLeast('medium')) {
-        unorphan($('h1, h2, h3, h4, blockquote, [data-unorphan]').not('[data-dont-unorphan]'));
-    }
-
-    require('test.js');
+    //require('./foo.js');
 });
+

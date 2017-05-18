@@ -1,0 +1,15 @@
+.header-mobile {
+    background-color: $light-gray;
+}
+
+.header-mobile__hamburger {
+    border-color: $medium-gray;
+
+    .fa-times {
+        color: #b70e0e;
+    }
+}
+
+.mobile-menu {
+    background-color: $light-gray;
+}

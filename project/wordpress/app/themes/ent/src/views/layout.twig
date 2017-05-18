@@ -1,12 +1,31 @@
-{% extends 'ent/base.twig' %}
+{% extends 'ent/layout.twig' %}
+{% import "ent/macros.twig" as ent %}
 
 {% block head %}
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
 {% endblock %}
 
+{% block header_large %}
+    <div class="show-for-large">
+        <strong>HEADER</strong>
+    </div>
+{% endblock %}
+
+{% block mobile_menu_content %}
+    <strong>MOBILE MENU</strong>
+    {#
+    {{ ent.menu_expanded(main_menu, 'mu-mobile-menu__menu') }}
+    {{ ent.header_locales_list(locales, 'native') }}
+    {{ social_links }}
+    #}
+{% endblock %}
+
+{#
 {% block body %}
     <header>
         <strong>HEADER</strong>
+        <div class="">
+        </div>
     </header>
     <main>
         {% block main %}{% endblock %}
@@ -14,4 +33,9 @@
     <footer>
         <strong>FOOTER</strong>
     </footer>
+{% endblock %}
+#}
+
+{% block footer %}
+    <strong>FOOTER</strong>
 {% endblock %}

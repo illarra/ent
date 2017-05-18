@@ -4,6 +4,11 @@ $unit-2: $unit * 2;
 $unit-05: $unit / 2;
 $unit-025: $unit / 4;
 
+// LOGO
+$logo-width-small: $logo-height-small * $logo-ratio;
+$logo-width-medium: $logo-height-medium * $logo-ratio;
+$logo-width-large: $logo-height-large * $logo-ratio;
+
 // HEADING
 // Ease-in transition from $font-size to $h2-size
 @function ease-in($t) {

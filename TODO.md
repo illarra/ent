@@ -18,10 +18,12 @@
 - [X] *!* 404
 
 - [ ] *!* Timber twig `|resize` no funciona…
-- [ ] *!* Tipos de cabecera (munger)
+- [ ] *!* Tipos de cabecera `header_large`
     - Twig include + blocks?? :-/
-    - Logo, ratio y height por ancho
 - [ ] *!* Tipos de footer (munger)
+- [/] *!* `mobile_menu`
+- [X] *!* `header_mobile`
+- [X] *!* Logo, ratio y height por ancho
 
 ### Widgets
 - [ ] *!* CSS
@@ -41,20 +43,11 @@
 ---
 
 ## Munger/Style Guide
-- [ ] *!* fixed
 - [ ] *!* icon-bar
 - [ ] *!* anchor
 - [ ] *!* slick
-- [ ] *!* magnific-popup
-- [X] *!* unit
-- [X] *!* headings: P/H6 -> H2
-- [X] *!* bg
-- [X] *!* icon-list
-- [X] *!* small/smaller
-- [X] *!* boxed
-- [X] *!* edge-image
-- [X] *!* text-columns
-- [X] *!* z-index
+- [/] *!* magnific-popup
+- [X] *!* fixed
 
 ---
 
@@ -72,6 +65,8 @@
 - ...
 
 ### Widgets
+- [ ] Mailchimp
+- [ ] Gravity forms?
 - [ ] Traducir labels de wigets
 - [ ] Integrar `CarbonFields/Transformer` (?)
 - [ ] `plop`:
@@ -81,6 +76,7 @@
 ### Misc
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
+    - https://github.com/benhuson/password-protected
 - [ ] Añadir un checklist? Analytics, SEO…
     - Cambiar: `Theme > Analytics ID`
     - Cambiar: `SEO > Home Page Settings > Custom Home Page Title Tagline`

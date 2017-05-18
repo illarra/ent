@@ -1,4 +1,6 @@
-.ent-style-guide {}
+.ent-style-guide {
+    padding: $unit-05 0 $unit;
+}
 
 .ent-style-column {
     width: 100%;
@@ -60,8 +62,6 @@ $fdn-colors: (
 
 @each $color-id, $color in $fdn-colors {
     .bg--#{$color-id} {
-        border: 1px solid $light-gray;
-
         span {
             font-family: $font-family-monospace;
             color: color-pick-contrast($color, ($black, $white));

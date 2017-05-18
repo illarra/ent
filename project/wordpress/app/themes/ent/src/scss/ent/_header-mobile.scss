@@ -1,0 +1,28 @@
+.header-mobile {
+    position: relative;
+    z-index: z-index(header-mobile);
+    transition: box-shadow 1000ms ease-out;
+    padding: ($unit * $header-mobile-padding) 0;
+
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+.header-mobile__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-mobile__hamburger {
+    color: $primary-color;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    font-size: rem-calc(19);
+    border-radius: $global-radius;
+    border: 1px solid transparent;
+}

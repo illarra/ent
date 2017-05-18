@@ -1,0 +1,24 @@
+.logo {
+    @if not $logo-image {
+        background-color: $medium-gray;
+    } @else {
+        background-image: url($logo-image);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    display: inline-block;
+    width: $logo-width-small;
+    height: $logo-height-small;
+
+    @include breakpoint(medium) {
+        width: $logo-width-medium;
+        height: $logo-height-medium;
+    }
+
+    @include breakpoint(large) {
+        width: $logo-width-large;
+        height: $logo-height-large;
+    }
+}
