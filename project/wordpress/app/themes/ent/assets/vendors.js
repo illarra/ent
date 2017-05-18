@@ -25715,6 +25715,7 @@ function checkScroll() {
     var el = getFixedEl();
     
     if (!el) {
+        $('main').css('marginTop', '0');
         return;
     }
     
@@ -25835,6 +25836,7 @@ function toggle() {
 
 // EVENTS
 hamburger.click(toggle);
+
 $(window).on('changed.zf.mediaquery', function (e, size) {
     if (Foundation.MediaQuery.atLeast('large')) {
         hide();

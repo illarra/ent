@@ -28,11 +28,15 @@
 
 .ent-style-box {
     margin: 0 auto;
-    width: 175px;
-    height: 175px;
+    width: 100%;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint(medium) {
+        height: 150px;
+    }
 }
 
 $fdn-colors: (

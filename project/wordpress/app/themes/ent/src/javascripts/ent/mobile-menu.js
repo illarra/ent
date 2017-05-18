@@ -39,6 +39,7 @@ function toggle() {
 
 // EVENTS
 hamburger.click(toggle);
+
 $(window).on('changed.zf.mediaquery', function (e, size) {
     if (Foundation.MediaQuery.atLeast('large')) {
         hide();

@@ -1679,11 +1679,11 @@ select {
       background-color: #126195;
       color: #fefefe; }
   .button.secondary {
-    background-color: #767676;
-    color: #fefefe; }
+    background-color: #15d2b7;
+    color: #0a0a0a; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #5e5e5e;
-      color: #fefefe; }
+      background-color: #11a892;
+      color: #0a0a0a; }
   .button.success {
     background-color: #3adb76;
     color: #0a0a0a; }
@@ -1717,11 +1717,11 @@ select {
         border-color: #0c3d5d;
         color: #0c3d5d; }
     .button.hollow.secondary {
-      border: 1px solid #767676;
-      color: #767676; }
+      border: 1px solid #15d2b7;
+      color: #15d2b7; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #3b3b3b;
-        color: #3b3b3b; }
+        border-color: #0b695c;
+        color: #0b695c; }
     .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
@@ -1756,8 +1756,8 @@ select {
       opacity: 0.25;
       cursor: not-allowed; }
       .button.disabled.secondary, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #767676;
-        color: #fefefe; }
+        background-color: #15d2b7;
+        color: #0a0a0a; }
     .button.disabled.success, .button[disabled].success {
       opacity: 0.25;
       cursor: not-allowed; }
@@ -5659,11 +5659,14 @@ img.mfp-img {
 
 .ent-style-box {
   margin: 0 auto;
-  width: 175px;
-  height: 175px;
+  width: 100%;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media print, screen and (min-width: 40em) {
+    .ent-style-box {
+      height: 150px; } }
 
 .ent-style-box--primary {
   background-color: #1779ba;
@@ -5673,11 +5676,11 @@ img.mfp-img {
     color: #fefefe; }
 
 .ent-style-box--secondary {
-  background-color: #767676;
+  background-color: #15d2b7;
   border: 1px solid #e6e6e6; }
   .ent-style-box--secondary span {
     font-family: Consolas, "Liberation Mono", Courier, monospace;
-    color: #fefefe; }
+    color: #0a0a0a; }
 
 .ent-style-box--white {
   background-color: #fefefe;
