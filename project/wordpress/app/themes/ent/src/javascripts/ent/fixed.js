@@ -47,6 +47,7 @@ function checkScroll() {
     var el = getFixedEl();
     
     if (!el) {
+        $('main').css('marginTop', '0');
         return;
     }
     
