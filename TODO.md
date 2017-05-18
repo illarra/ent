@@ -62,7 +62,7 @@
 
 ## Ent library (php)
 ### Templates, macros & hooks (twig)
-- ...
+- [ ] Gravity Forms override default templates => Foundation
 
 ### Widgets
 - [ ] Mailchimp
@@ -96,6 +96,7 @@
 
 ### i18n
 - [ ] Crear plugin para copiar contenido de CF entre idiomas de WPML. Molaria que sincronice **unos campos** automaticamente entre plantillas cuando se guarda o se duplica mediante WPML.
+- Get CPT from ID... `'trainings_page' => get_permalink(icl_object_id(carbon_get_theme_option('formacions_id'), 'page'))`
 
 ### Forms
 - [ ] Formularios: gravity forms?
