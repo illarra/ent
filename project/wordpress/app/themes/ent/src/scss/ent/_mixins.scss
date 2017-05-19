@@ -1,10 +1,10 @@
-@function shade($color, $amount: 10%) {
+@function shade($color, $percent: 10%) {
     $black: hsl(hue(complement($color)), 100%, 10%);
-    @return mix($black, $color, $amount);
+    @return mix($black, $color, $percent);
 }
 
-@function tint($color, $amount: 18%) {
-    @return mix(white, $color, $amount);
+@function tint($color, $percent: 18%) {
+    @return mix(white, $color, $percent);
 }
 
 @function z-index($id) {
