@@ -3,52 +3,38 @@
 {% block body %}
     <header>
         {% block header %}
-            <!-- header -->
-            <!-- header_large -->
             {% block header_large %}{% endblock %}
-            <!-- /header_large -->
             {% block header_mobile %}
-                <!-- header_mobile -->
                 <div class="header-mobile" data-header-mobile data-fixed="small medium">
                     <div class="row">
                         <div class="small-12 columns header-mobile__content">
-                            <a class="logo" href="{{ site.link }}" title="{{ site.name }}"></a>
+                            <a class="logo" href="{{ site.link }}" title="{{ site.name }}">{{ site.name }}</a>
                             <a class="header-mobile__hamburger" data-hamburger="fa fa-fw fa-bars,fa fa-fw fa-times">
                                 <i data-hamburger-icon class="fa fa-fw fa-bars"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- /header_mobile -->
             {% endblock %}
-            <!-- /header -->
         {% endblock %}
     </header>
     {% block mobile_menu %}
-        <!-- mobile_menu -->
         <nav class="mobile-menu" data-mobile-menu>
             <div class="mobile-menu__content">
                 <div class="row align-center">
                     <div class="small-11 medium-6 columns">
                         <div class="mobile-menu__card">
-                            <!-- mobile_menu_content -->
                             {% block mobile_menu_content %}{% endblock %}
-                            <!-- /mobile_menu_content -->
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <!-- /mobile_menu -->
     {% endblock %}
     <main>
-        <!-- main -->
         {% block main %}{% endblock %}
-        <!-- /main -->
     </main>
     <footer>
-        <!-- footer -->
         {% block footer %}{% endblock %}
-        <!-- /footer -->
     </footer>
 {% endblock %}
