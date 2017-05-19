@@ -5668,33 +5668,81 @@ img.mfp-img {
     .ent-style-box {
       height: 150px; } }
 
+.ent-style-box--palette {
+  border: 1px solid #e6e6e6;
+  position: relative;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  padding-bottom: 25px; }
+  .ent-style-box--palette:after, .ent-style-box--palette:before {
+    font-size: 0.76471rem;
+    text-align: center;
+    bottom: 0px;
+    position: absolute;
+    width: 50%;
+    height: 25px;
+    line-height: 25px; }
+  .ent-style-box--palette:before {
+    content: 'tint';
+    left: 0px; }
+  .ent-style-box--palette:after {
+    content: 'shade';
+    right: 0px; }
+
 .ent-style-box--primary {
   background-color: #1779ba;
-  border: 1px solid #e6e6e6; }
-  .ent-style-box--primary span {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    color: #fefefe; }
+  color: #fefefe; }
+  .ent-style-box--primary:before {
+    background-color: #4191c6; }
+  .ent-style-box--primary:after {
+    background-color: #1a6fa7; }
 
 .ent-style-box--secondary {
   background-color: #15d2b7;
-  border: 1px solid #e6e6e6; }
-  .ent-style-box--secondary span {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    color: #0a0a0a; }
+  color: #0a0a0a; }
+  .ent-style-box--secondary:before {
+    background-color: #3fdac4; }
+  .ent-style-box--secondary:after {
+    background-color: #18bda5; }
 
 .ent-style-box--white {
   background-color: #fefefe;
-  border: 1px solid #e6e6e6; }
-  .ent-style-box--white span {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    color: #0a0a0a; }
+  color: #0a0a0a; }
+  .ent-style-box--white:before {
+    background-color: #fefefe; }
+  .ent-style-box--white:after {
+    background-color: #eae5e5; }
 
 .ent-style-box--black {
   background-color: #0a0a0a;
-  border: 1px solid #e6e6e6; }
-  .ent-style-box--black span {
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    color: #fefefe; }
+  color: #fefefe; }
+  .ent-style-box--black:before {
+    background-color: #363636; }
+  .ent-style-box--black:after {
+    background-color: #0e0909; }
+
+.ent-style-box--light-gray {
+  background-color: #e6e6e6;
+  color: #0a0a0a; }
+  .ent-style-box--light-gray:before {
+    background-color: #ebebeb; }
+  .ent-style-box--light-gray:after {
+    background-color: #d4cfcf; }
+
+.ent-style-box--medium-gray {
+  background-color: #cacaca;
+  color: #0a0a0a; }
+  .ent-style-box--medium-gray:before {
+    background-color: #d4d4d4; }
+  .ent-style-box--medium-gray:after {
+    background-color: #bbb6b6; }
+
+.ent-style-box--dark-gray {
+  background-color: #8a8a8a;
+  color: #0a0a0a; }
+  .ent-style-box--dark-gray:before {
+    background-color: #9f9f9f; }
+  .ent-style-box--dark-gray:after {
+    background-color: #817c7c; }
 
 .bg--light-gray span {
   font-family: Consolas, "Liberation Mono", Courier, monospace;

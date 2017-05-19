@@ -39,21 +39,54 @@
     }
 }
 
+.ent-style-box--palette {
+    border: 1px solid $light-gray;
+    position: relative;
+    font-family: $font-family-monospace;
+    padding-bottom: 25px;
+
+    &:after, &:before {
+        font-size: $smaller-size;
+        text-align: center;
+        bottom: 0px;
+        position: absolute;
+        width: 50%;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    &:before {
+        content: 'tint';
+        left: 0px;
+    }
+
+    &:after {
+        content: 'shade';
+        right: 0px;
+    }
+}
+
 $fdn-colors: (
     'primary': $primary-color,
     'secondary': $secondary-color,
     'white': $white,
     'black': $black,
+    'light-gray': $light-gray,
+    'medium-gray': $medium-gray,
+    'dark-gray': $dark-gray,
 );
 
 @each $color-id, $color in $fdn-colors {
     .ent-style-box--#{$color-id} {
         background-color: $color;
-        border: 1px solid $light-gray;
+        color: color-pick-contrast($color, ($black, $white));
 
-        span {
-            font-family: $font-family-monospace;
-            color: color-pick-contrast($color, ($black, $white));
+        &:before {
+            background-color: tint($color);
+        }
+
+        &:after {
+            background-color: shade($color);
         }
     }
 }
