@@ -1,0 +1,26 @@
+{% import 'ent/macros.twig' as ent %}
+
+<div class="show-for-large">
+    <div class="header__logo-row">
+        <div class="row">
+            <div class="header__logo-column small-12 columns">
+                <a href="{{ site.link }}"><h1 class="logo">{{ site.name }}</h1></a>                
+                <div>
+                    {% block secondary_menu %}
+                        {{ ent.header_locales_list(locales) }}
+                        {{ social_links }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu-row" data-fixed="large">
+        <div class="row">
+            <div class="small-12 columns">
+                {% block menu %}
+                    {{ ent.menu(main_menu, 'menu') }}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>

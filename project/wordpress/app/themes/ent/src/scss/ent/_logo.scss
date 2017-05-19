@@ -11,6 +11,8 @@
     display: inline-block;
     width: $logo-width-small;
     height: $logo-height-small;
+    text-indent: -999em;
+    margin: 0;
 
     @include breakpoint(medium) {
         width: $logo-width-medium;

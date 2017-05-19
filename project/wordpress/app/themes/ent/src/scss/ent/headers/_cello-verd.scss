@@ -1,0 +1,14 @@
+.header__logo-row {
+    background-color: $white;
+    padding: $unit-05 0;
+}
+
+.header__logo-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.header__menu-row {
+    background-color: $black;
+}

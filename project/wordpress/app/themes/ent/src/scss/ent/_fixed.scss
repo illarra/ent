@@ -1,8 +1,7 @@
 .fixed__element {
-    z-index: z-index(fixed);
     transition: box-shadow 1s ease-out;
     position: fixed;
-    z-index: 99;
+    z-index: z-index(fixed);
     width: 100%;
     top: 0;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
