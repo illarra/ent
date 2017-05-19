@@ -20,6 +20,7 @@
 - [ ] *!* Timber twig `|resize` no funciona…
 - [ ] *!* Tipos de cabecera `header_large`
     - Twig include + blocks?? :-/
+    - Bug: large, scroll, resize window, salta arriba sin que haya cambio de breakpoint
 - [ ] *!* Tipos de footer (munger)
 - [/] *!* `mobile_menu`
 - [X] *!* `header_mobile`
