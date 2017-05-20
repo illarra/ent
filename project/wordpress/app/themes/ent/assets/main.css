@@ -5823,6 +5823,10 @@ html {
     html {
       font-size: 17px; } }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin-bottom: 0.58824rem; }
+
 h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: bold; }

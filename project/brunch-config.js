@@ -27,7 +27,6 @@ module.exports = {
     npm: {
         globals: {
             jQuery: 'jquery',
-            unorphan: 'unorphan',
         }
     },
     conventions: {

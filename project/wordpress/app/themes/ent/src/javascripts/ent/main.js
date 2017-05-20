@@ -1,4 +1,5 @@
 var $ = require('jquery');
+var unorphan = require('unorphan');
 
 require('magnific-popup');
 require('slick-carousel');
@@ -10,7 +11,7 @@ $(function () {
 
     // Unorphan en medium o más
     if (Foundation.MediaQuery.atLeast('medium')) {
-        unorphan($('h1, h2, h3, h4, blockquote, [data-unorphan]').not('[data-dont-unorphan]'));
+        unorphan($('h1, h2, h3, h4, h5, h6, blockquote, [data-unorphan]').not('[data-dont-unorphan]'));
     }
 
     // Load Ent modules
