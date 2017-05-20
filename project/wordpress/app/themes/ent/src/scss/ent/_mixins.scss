@@ -1,9 +1,9 @@
-@function shade($color, $percent: 10%) {
+@function shade($color, $percent: 8%) {
     $black: hsl(hue(complement($color)), 100%, 10%);
     @return mix($black, $color, $percent);
 }
 
-@function tint($color, $percent: 18%) {
+@function tint($color, $percent: 16%) {
     @return mix(white, $color, $percent);
 }
 

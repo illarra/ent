@@ -23,16 +23,19 @@ $fa-font-path: "fonts";
 @import 'magnific-popup/src/css/main';
 
 // Ent (POST)
-@import 'bg';
-@import 'boxed';
-@import 'edge-image';
-@import 'header-mobile';
-@import 'icon-list';
-@import 'logo';
-@import 'mobile-menu';
+@import 'components/bg';
+@import 'components/boxed';
+@import 'components/edge-image';
+@import 'components/header-mobile';
+@import 'components/icon-list';
+@import 'components/locales';
+@import 'components/logo';
+@import 'components/mobile-menu';
+@import 'components/text-columns';
+@import 'widgets/icons';
+
 @import 'style-guide';
-@import 'text-columns';
 @import 'typography';
 
 // We want this to have preference over header-mobile
-@import 'fixed';
+@import 'components/fixed';

@@ -5,9 +5,9 @@
         <div class="row">
             <div class="header__logo-column small-12 columns">
                 <a href="{{ site.link }}"><h1 class="logo">{{ site.name }}</h1></a>                
-                <div>
+                <div class="header__secondary-menu">
                     {% block secondary_menu %}
-                        {{ ent.header_locales_list(locales) }}
+                        {{ ent.locales_list(locales) }}
                         {{ social_links }}
                     {% endblock %}
                 </div>
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="small-12 columns">
                 {% block menu %}
-                    {{ ent.menu(main_menu, 'menu') }}
+                    {{ ent.menu(main_menu, 'menu header__menu') }}
                 {% endblock %}
             </div>
         </div>

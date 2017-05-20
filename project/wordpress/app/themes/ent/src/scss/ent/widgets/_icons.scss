@@ -1,0 +1,12 @@
+.ent-widget-icons {}
+
+.ent-widget-icons__list {
+    margin: 0;
+}
+
+.ent-widget-icons__entry {
+    display: inline-block;
+    list-style: none;
+    font-size: $h5-size;
+    margin: 0 ($unit / 8);
+}

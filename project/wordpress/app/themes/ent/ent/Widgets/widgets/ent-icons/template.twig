@@ -1,8 +1,8 @@
 <div class="ent-widget ent-widget-icons">
-    <ul>
+    <ul class="ent-widget-icons__list">
         {% for icon in icons %}
-            <li>
-                <a href="{{ icon.url }}"><i class="fa fa-fw fa-{{ icon.name }}"></i></a>
+            <li class="ent-widget-icons__entry">
+                <a href="{{ icon.url }}" class="ent-widget-icons__link"><i class="fa fa-fw fa-{{ icon.name }} ent-widget-icons__icon"></i></a>
             </li>
         {% endfor %}
     </ul>

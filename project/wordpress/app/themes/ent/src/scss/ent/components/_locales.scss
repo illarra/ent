@@ -1,0 +1,20 @@
+.ent-locales {
+    display: inline-block;
+}
+
+.ent-locales--code-2 {
+    text-transform: uppercase;
+}
+
+.ent-locales--list {
+    margin: 0;
+}
+
+.ent-locales__entry {
+    list-style: none;
+    margin: 0 $unit-025;
+}
+
+.no-js .ent-locales--dropdown .ent-locales__entry {
+    display: none;
+}

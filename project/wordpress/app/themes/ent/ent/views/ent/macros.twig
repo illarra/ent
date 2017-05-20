@@ -36,7 +36,7 @@
     {{ ent._menu(menu, class ~' dropdown') }}
 {% endmacro %}
 
-{% macro _header_locales_name(locale, type) %}
+{% macro _locales_name(locale, type) %}
     {% if type == 'native' %}
         {{ locale.native_name }}
     {% elseif type == 'code-3' %}
@@ -46,31 +46,33 @@
     {% endif %}
 {% endmacro %}
 
-{% macro header_locales_list(locales, type) %}
+{% macro locales_list(locales, type) %}
     {% import _self as ent %}
 
     {% if locales.alt|length %}
-        <ul class="mu-header__alt-menu ent-header-locales ent-header-locales--list ent-header-locales--{{ type|default('code-2') }}">
+        <ul class="ent-locales ent-locales--list ent-locales--{{ type|default('code-2') }}">
             {% for l in locales.alt %}
-                <li><a href="{{ l.url }}">{{ ent._header_locales_name(l, type) }}</a></li>
+                <li class="ent-locales__entry"><a href="{{ l.url }}">{{ ent._locales_name(l, type) }}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
 {% endmacro %}
 
-{% macro header_locales_dropdown(locales, type) %}
+{% macro locales_dropdown(locales, type) %}
     {% import _self as ent %}
 
     {% if locales.alt|length %}
-        <ul class="mu-header__alt-menu ent-header-locales ent-header-locales--dropdown ent-header-locales--{{ type|default('code-2') }}" data-dropdown-menu>
-            <li>
-                <a href="#">{{ locales.current.native_name }} <i class="fa fa-angle-down"></i></a>
-                <ul>
-                    {% for l in locales.alt %}
-                        <li><a href="{{ l.url }}">{{ ent._header_locales_name(l, type) }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
+        <div class="ent-locales ent-locales--dropdown ent-locales--{{ type|default('code-2') }}">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li>
+                    <a class="ent-locales__current" href="#">{{ ent._locales_name(locales.current, type) }}</a>
+                    <ul>
+                        {% for l in locales.alt %}
+                            <li class="ent-locales__entry"><a href="{{ l.url }}">{{ ent._locales_name(l, type) }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
     {% endif %}
 {% endmacro %}
