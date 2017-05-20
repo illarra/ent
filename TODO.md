@@ -2,46 +2,21 @@
 
 ## Ent library
 ### Templates, macros & hooks (twig)
-- [ ] *!* Archive:
-    - Title de content: primero calcular el string, guardarlo (set), y despues añadir un bloque con el html
-    - [ ] search
-    - [ ] year
-    - [ ] month
-    - [ ] day
-    - [ ] author
-    - [ ] term: category, tags, x…
-    - [ ] post-type
-- [ ] *!* Single (post view)
-- [X] *!* Single (page)
-- [X] *!* Home (blog index)
-- [X] *!* Front page
-- [X] *!* 404
-
 - [ ] *!* Timber twig `|resize` no funciona…
 - [ ] *!* Tipos de cabecera `header_large`
     - [X] Cello verd
     - [ ] La boop
     - [ ] Mugari
     - [ ] Mess
-- [ ] *!* Tipos de footer (munger)
 - [/] *!* `mobile_menu`
-- [X] *!* `header_mobile`
-- [X] *!* Logo, ratio y height por ancho
 
 ### Widgets
 - [ ] *!* CSS
-    - [ ] archives
-    - [ ] icons
-    - [ ] recent posts
-    - [ ] search
-    - [ ] terms cloud
-    - [ ] terms list
     - [ ] text
 
 ### Misc
 - [ ] *!* Instalar: un plugin bueno para compartir en redes sociales
 - [ ] *!* Check si soil esta funcionando bien
-- [ ] *!* Instalar: plugin bueno para gestionar archivos media de WP
 
 ---
 
@@ -64,9 +39,40 @@
 -------
 -------
 
+## Ent library
+### Templates, macros & hooks (twig)
+- [ ] *!* Archive:
+    - Title de content: primero calcular el string, guardarlo (set), y despues añadir un bloque con el html
+    - [ ] search
+    - [ ] year
+    - [ ] month
+    - [ ] day
+    - [ ] author
+    - [ ] term: category, tags, x…
+    - [ ] post-type
+- [ ] *!* Single (post view)
+- [X] *!* Single (page)
+- [X] *!* Home (blog index)
+- [X] *!* Front page
+- [X] *!* 404
+
+### Widgets
+- [ ] *!* CSS
+    - [ ] archives
+    - [ ] recent posts
+    - [ ] search
+    - [ ] terms cloud
+    - [ ] terms list
+
+-------
+-------
+-------
+-------
+
 ## Ent library (php)
 ### Templates, macros & hooks (twig)
 - [ ] Gravity Forms override default templates => Foundation
+- [ ] Tipos de footer
 
 ### Widgets
 - [ ] Mailchimp
@@ -78,6 +84,7 @@
     - `Proper_Snake_Case` para el nombre de la clase (ver en Infraestructura "añadir properSnakeCase")
 
 ### Misc
+- [ ] Instalar: plugin bueno para gestionar archivos media de WP
 - [ ] Añadir tamaños de imagen siguiendo el número de columnas (?).
 - [ ] Documentar el listado de plugins que molan y para que se utilizan. Falta: calendarios. Better Font Awesome (?).
     - https://github.com/benhuson/password-protected
@@ -87,7 +94,6 @@
 - [ ] Chequear si se han regenerado los salts de wp-config
 - [ ] Tests
 - [ ] Caching y optimización de wordpress (investigar)
-- [X] Tener un /style-guide donde mirar como quedan los diferentes elementos?
 
 ### Post/Terms
 - [ ] Helpers: get listado de taxonomia, etc. que devuelva con la clase que toca? hacer un wrapper alrededor de `Timber::get_post`, `get_posts`, `get_term…
