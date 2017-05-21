@@ -244,9 +244,7 @@ $(window).on('load', function () {
 
 require.register("ent/main.js", function(exports, require, module) {
 var $ = require('jquery');
-var unorphan = require('unorphan');
 
-require('magnific-popup');
 require('slick-carousel');
 require('foundation-sites');
 
@@ -254,21 +252,19 @@ $(function () {
     // Init Foundation
     $(document).foundation();
 
-    // Unorphan en medium o más
-    if (Foundation.MediaQuery.atLeast('medium')) {
-        unorphan($('h1, h2, h3, h4, h5, h6, blockquote, [data-unorphan]').not('[data-dont-unorphan]'));
-    }
-
     // Load Ent modules
     require('./fixed.js');
     require('./mobile-menu.js');
     require('./media.js');
+    require('./unorphan.js');
 });
 
 });
 
 require.register("ent/media.js", function(exports, require, module) {
 var $ = require('jquery');
+
+require('magnific-popup');
 
 $('[data-media-popup]').magnificPopup({ type: 'image' });
 $('[data-media-gallery]').each(function () {
@@ -336,7 +332,20 @@ $(window).on('changed.zf.mediaquery', function (e, size) {
 
 });
 
-require.register("main.js", function(exports, require, module) {
+require.register("ent/unorphan.js", function(exports, require, module) {
+var $           = require('jquery');
+var unorphan    = require('unorphan');
+var selector    = 'h1, h2, h3, h4, h5, h6, blockquote, [data-unorphan]';
+var notSelector = '[data-dont-unorphan]';
+
+// Unorphan en medium o más
+if (Foundation.MediaQuery.atLeast('medium')) {
+    unorphan($(selector).not(notSelector));
+}
+
+});
+
+;require.register("main.js", function(exports, require, module) {
 var $ = require('jquery');
 
 require('ent/main.js');
