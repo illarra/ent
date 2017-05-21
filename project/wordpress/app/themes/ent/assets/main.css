@@ -5450,6 +5450,18 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
+.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: -90px; }
+  @media print, screen and (min-width: 40em) {
+    .anchor {
+      top: -100px; } }
+  @media print, screen and (min-width: 64em) {
+    .anchor {
+      top: -80px; } }
+
 .bg--light-gray {
   background-color: #e6e6e6; }
 
