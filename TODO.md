@@ -11,13 +11,6 @@
 
 ---
 
-## Munger/Style Guide
-- [ ] icon-bar
-- [ ] slick
-- [/] magnific-popup
-
----
-
 ## Infraestructura/Tooling
 - [ ] Que hacer con los salts? Si se regenera `wp-config.php` el login peta? que pasos hay que seguir cuando se empieza un nuevo proyecto?
     - Añadir un script `init-project` que regenere wp-config y actualice la contraseña del usuario??
@@ -70,6 +63,10 @@
     - crear el código autogenerado al principio y entre unos delimitadores:
     {# <page-fields-cheatsheet> #}
     {# </page-fields-cheatsheet> #}
+
+## Munger/Style Guide
+- [ ] icon-bar
+- [ ] slick
 
 -------
 -------
