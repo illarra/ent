@@ -1,4 +1,22 @@
+var crypto = require('crypto');
+
 module.exports = function (plop) {
+    plop.addHelper('randomKey', function () {
+        return crypto.randomBytes(32).toString('hex');
+    });
+
+    plop.setGenerator('component', {
+        description: 'Generate VisualComposer (VC) component',
+        prompts: [],
+        actions: [],
+    });
+
+    plop.setGenerator('component-tpls', {
+        description: 'Generate VC component templates (twig & admin) based on the defined fields',
+        prompts: [],
+        actions: [],
+    });
+
     plop.setGenerator('widget', {
         description: 'Generate WordPress widget',
         prompts: [{
@@ -18,6 +36,17 @@ module.exports = function (plop) {
             type: 'add',
             path: 'wordpress/app/themes/ent/src/widgets/{{ dashCase name }}/template.twig',
             templateFile: 'plop/widget/template.hbs'
+        }]
+    });
+
+    plop.setGenerator('wp-config', {
+        description: 'Generate WordPress wp-config.php with random keys/salt',
+        prompts: [],
+        actions: [{
+            type: 'modify',
+            path: 'wordpress/wp-config.php',
+            pattern: /([\s\S]*)/,
+            templateFile: 'plop/wp-config.hbs'
         }]
     });
 };

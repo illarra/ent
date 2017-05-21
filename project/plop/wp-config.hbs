@@ -1,0 +1,49 @@
+<?php
+// Define environment constant
+define('WP_ENV', __DIR__ == '/var/project/wordpress' ? 'DEV' : 'PROD');
+
+// Load configuration
+$config = require_once(__DIR__ .'/config/dev.php');
+
+if (WP_ENV == 'PROD') {
+    $config = array_merge($config, require_once(__DIR__ .'/config/prod.php'));
+}
+
+define('ROOT_DIR', __DIR__);
+
+// URLs
+define('WP_HOME', $config['WP_HOME']);
+define('WP_SITEURL', WP_HOME . '/wp');
+
+// Custom Content Directory
+define('WP_CONTENT_DIR', __DIR__ . '/app');
+define('WP_CONTENT_URL', WP_HOME . '/app');
+
+// DB conection
+define('DB_NAME',     $config['DB_NAME']);
+define('DB_USER',     $config['DB_USER']);
+define('DB_PASSWORD', $config['DB_PASSWORD']);
+define('DB_HOST',     $config['DB_HOST']);
+define('DB_CHARSET',  $config['DB_CHARSET']);
+define('DB_COLLATE',  $config['DB_COLLATE']);
+
+// Authentication unique keys and salts
+define('AUTH_KEY',         '{{ randomKey }}');
+define('SECURE_AUTH_KEY',  '{{ randomKey }}');
+define('LOGGED_IN_KEY',    '{{ randomKey }}');
+define('NONCE_KEY',        '{{ randomKey }}');
+define('AUTH_SALT',        '{{ randomKey }}');
+define('SECURE_AUTH_SALT', '{{ randomKey }}');
+define('LOGGED_IN_SALT',   '{{ randomKey }}');
+define('NONCE_SALT',       '{{ randomKey }}');
+
+// WordPress database table prefix
+$table_prefix = 'wp_';
+
+// Absolute path to the WordPress directory.
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/wp/');
+}
+
+// Sets up WordPress vars and included files.
+require_once(ABSPATH . 'wp-settings.php');
