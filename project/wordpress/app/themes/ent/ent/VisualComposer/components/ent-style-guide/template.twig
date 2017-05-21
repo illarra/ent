@@ -275,6 +275,49 @@
     <div class="row">
         <div class="small-12 columns">
             <hr>
+
+            <h6>Media popup</h6>
+
+            <p>Add <code>data-media-popup</code> to an anchor to define a media popup. The <code>href</code> from the anchor is used as source for the media. To show a video add the <code>mfp-iframe</code> class to the anchor and just define the Youtube/Vimeo link as <code>href</code>.</p>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                    <p><a data-media-popup href="/app/uploads/2017/04/bg-great-wave.jpg">Image popup</a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <p><a data-media-popup class="mfp-iframe" href="https://www.youtube.com/watch?v=kfoJUeyMsOE">Iframe popup</a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <p><a data-media-popup href="/app/uploads/2017/05/bg-zarautz.jpg"><img src="/app/uploads/2017/05/bg-zarautz.jpg"/></a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <a data-media-popup class="mfp-iframe" href="https://vimeo.com/channels/staffpicks/217824935"><div class="ent-style-box bg--light-gray"><span>Video Thumbnail</span></div></a>
+                </div>
+            </div>
+
+            <hr>
+
+            <h6>Media gallery</h6>
+
+            <p>Add <code>data-media-gallery</code> to an element wrapping some anchors with <code>href</code> pointing to the media (see "Media popup").</p>
+
+            <div class="row" data-media-gallery>
+                <div class="small-12 medium-3 columns">
+                    <p><a href="/app/uploads/2017/04/bg-great-wave.jpg">Image popup</a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <p><a class="mfp-iframe" href="https://www.youtube.com/watch?v=kfoJUeyMsOE">Iframe popup</a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <p><a href="/app/uploads/2017/05/bg-zarautz.jpg"><img src="/app/uploads/2017/05/bg-zarautz.jpg"/></a></p>
+                </div>
+                <div class="small-12 medium-3 columns">
+                    <a class="mfp-iframe" href="https://vimeo.com/channels/staffpicks/217824935"><div class="ent-style-box bg--light-gray"><span>Video Thumbnail</span></div></a>
+                </div>
+            </div>
+
+            <hr>
+
             <h6>unit</h6>
 
             <p>Use following SASS vars for margins &amp; paddings:</p>
