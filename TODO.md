@@ -13,11 +13,8 @@
 
 ## Munger/Style Guide
 - [ ] icon-bar
-- [ ] anchor
 - [ ] slick
 - [/] magnific-popup
-- [/] fixed
-    - [ ] Bug: large, scroll, resize window, salta arriba sin que haya cambio de breakpoint
 
 ---
 

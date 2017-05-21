@@ -70,9 +70,14 @@ function checkScroll() {
 
 // Events
 // Re-initialize on breakpoint change
-$(window).on('changed.zf.mediaquery', function () {
-    $(window).scrollTop(0);
-    init();
+// Ignore transitions between large breakpoints
+$(window).on('changed.zf.mediaquery', function (e, newBp, oldBp) {
+    var largeBps = ['large', 'xlarge', 'xxlarge'];
+
+    if (!(largeBps.indexOf(newBp) >= 0 && largeBps.indexOf(oldBp) >= 0)) {
+        $(window).scrollTop(0);
+        init();
+    }
 });
 
 $(window).on('scroll', checkScroll);
