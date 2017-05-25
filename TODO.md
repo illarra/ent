@@ -7,6 +7,9 @@
 
 ### Misc
 - [ ] Instalar: un plugin bueno para compartir en redes sociales
+    - Con más redes sociales...
+    - Con URL shortener
+    - Con via @xyz (twitter)
 - [ ] Check si soil esta funcionando bien
 
 ---
