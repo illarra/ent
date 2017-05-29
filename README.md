@@ -56,7 +56,7 @@ nginx:
 - En la maquina virtual:
     - Carga datos en la base de datos: `$ db-import`
     - Ir a `$ cd /var/project/wordpress`
-    - Cambiar URL vieja en la DB: `$ wp search-replace 'apostrof-wordpress.dev' 'matriu-appoderat.dev' --skip-columns=guid`
+    - Cambiar URL vieja en la DB: `$ wp search-replace 'apostrof-wordpress.dev' '{CLIENT}-{PROJECT}.dev' --skip-columns=guid`
     - Actualizar salts de WordPress: `$ plop wp-config`
     - Hacer backup de la DB: `$ db-export`
 
