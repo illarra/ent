@@ -28,6 +28,7 @@
     "css-brunch": "^2.6.1",
     "csswring": "^5.1.0",
     "fingerprint-brunch": "^1.2.5",
+    "inquirer-recursive": "^0.0.5",
     "javascript-brunch": "^2.0.0",
     "sass-brunch": "^2.6.3",
     "slug": "^0.9.1",
