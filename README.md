@@ -1,5 +1,12 @@
 # l'Apòstrof Wordpress
 
+- [Iniciar proyecto](#markdown-header-iniciar-proyecto)
+- [Desarrollo](#markdown-header-desarrollo)
+    - [_Style Guide_](#markdown-header-style-guide)
+    - [Cambiar header](#markdown-header-cambiar-header)
+
+---
+
 ## Iniciar proyecto
 
 ### Fork del repositorio
@@ -63,3 +70,17 @@ nginx:
 ### Commit & profit
 
 ![](setup-done.gif)
+
+## Desarrollo
+
+### Style Guide
+
+...
+
+### Cambiar header
+
+...
+
+### Añadir un post type
+
+- `$ plop post-type` o algun otro generator dentro de ese namespace.

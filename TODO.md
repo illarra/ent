@@ -51,9 +51,9 @@
     - [ ] text
 
 ## Infraestructura/Tooling
-- [ ] `plop` añadir helper `properSnakeCase` o ver como se puede concatenar `properCase` y `snakeCase`
-- [ ] inquirer-recursive: https://www.npmjs.com/package/inquirer-recursive
-- [ ] `plop component`: generar carpeta y archivos, registrar .scss. Que pregunte si es tipo: normal, container-parent o container-child.
+- [ ] `plop component`:
+    - Generar carpeta y archivos, registrar .scss.
+    - Que pregunte si es tipo: normal, container-parent o container-child.
 - [ ] `plop component-tpl`
     - generar `twig` y `admin.html`. Detectar el listado de parametros, basandonos en el tipo de cada parametro generar el código que toca (imagen, link, texto…). Molaria que tambien mire `get_context_data` para por lo menos saber que otras variables hay. Si es plural `resources` que genere un `{% for %}`
     - tener en cuenta si es tipo container o no en base a eso `.row.small-up-1...` + admin.html con `<container/>`,

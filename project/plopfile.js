@@ -10,11 +10,13 @@ module.exports = function (plop) {
         actions: [],
     });
 
+    /*
     plop.setGenerator('component-tpls', {
         description: 'VC component templates (twig & admin) based on the defined fields',
         prompts: [],
         actions: [],
     });
+    */
 
     plop.setGenerator('post-type', {
         description: 'WordPress post type',
