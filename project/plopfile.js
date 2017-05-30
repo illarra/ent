@@ -1,3 +1,5 @@
+let validate = require('./plop/validate');
+
 module.exports = function (plop) {
     // Load helpers
     require('./plop/helpers')(plop);
@@ -20,10 +22,7 @@ module.exports = function (plop) {
             type: 'input',
             name: 'name',
             message: 'Name:',
-            validate: function (value) {
-                if ((/.+/).test(value)) { return true; }
-                return 'Name is required.';
-            }
+            validate: validate(['required', 'Name is required.']),
         }],
         actions: [{
             type: 'add',
