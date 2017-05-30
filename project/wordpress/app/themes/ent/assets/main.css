@@ -5864,36 +5864,6 @@ p:empty {
   top: 0;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); }
 
-.header__logo-row {
-  background-color: #fefefe;
-  padding: 1.17647rem 0; }
-
-.header__logo-column {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; }
-
-.header__secondary-menu .ent-locales {
-  font-size: 0.88235rem; }
-
-.header__secondary-menu .ent-widget-icons {
-  border-left: 1px solid #eeeaea;
-  display: inline-block; }
-
-.header__menu-row {
-  background-color: #0a0a0a; }
-
-.header__menu > .menu-item {
-  border-left: 1px solid #313131; }
-  .header__menu > .menu-item:first-child {
-    border-left: none; }
-  .header__menu > .menu-item > a {
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 60px;
-    height: 60px;
-    padding: 0 1.17647rem; }
-
 .header-mobile {
   background-color: #e6e6e6; }
 
