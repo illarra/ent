@@ -1,9 +1,6 @@
-var crypto = require('crypto');
-
 module.exports = function (plop) {
-    plop.addHelper('randomKey', function () {
-        return crypto.randomBytes(32).toString('hex');
-    });
+    // Load helpers
+    require('./plop/helpers')(plop);
 
     plop.setGenerator('component', {
         description: 'Generate VisualComposer (VC) component',
