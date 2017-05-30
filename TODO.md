@@ -12,12 +12,6 @@
     - Con via @xyz (twitter)
 - [ ] Check si soil esta funcionando bien
 
----
-
-## Infraestructura/Tooling
-- [ ] Que hacer con los salts? Si se regenera `wp-config.php` el login peta? que pasos hay que seguir cuando se empieza un nuevo proyecto?
-    - Añadir un script `init-project` que regenere wp-config y actualice la contraseña del usuario??
-
 -------
 -------
 -------
