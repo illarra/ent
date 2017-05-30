@@ -46,7 +46,7 @@ module.exports = function (plop) {
             type: 'modify',
             path: 'wordpress/wp-config.php',
             pattern: /([\s\S]*)/,
-            templateFile: 'plop/wp-config.hbs'
+            templateFile: 'plop/wp-config/wp-config.hbs'
         }]
     });
 };
