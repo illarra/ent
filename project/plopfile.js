@@ -5,19 +5,19 @@ module.exports = function (plop) {
     require('./plop/helpers')(plop);
 
     plop.setGenerator('component', {
-        description: 'Generate VisualComposer (VC) component',
+        description: 'VisualComposer (VC) component',
         prompts: [],
         actions: [],
     });
 
     plop.setGenerator('component-tpls', {
-        description: 'Generate VC component templates (twig & admin) based on the defined fields',
+        description: 'VC component templates (twig & admin) based on the defined fields',
         prompts: [],
         actions: [],
     });
 
     plop.setGenerator('widget', {
-        description: 'Generate WordPress widget',
+        description: 'WordPress widget',
         prompts: [{
             type: 'input',
             name: 'name',
@@ -36,7 +36,7 @@ module.exports = function (plop) {
     });
 
     plop.setGenerator('wp-config', {
-        description: 'Generate WordPress wp-config.php with random keys/salt',
+        description: 'WordPress wp-config.php with random keys/salt',
         prompts: [],
         actions: [{
             type: 'modify',
