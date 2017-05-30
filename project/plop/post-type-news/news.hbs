@@ -1,0 +1,30 @@
+<?php
+namespace Ent\CPT;
+
+use Carbon_Fields\Field;
+use Ent\CarbonFields\Field as EntField;
+
+class News extends \Ent\CPT {
+    public static $enable_vc = false;
+
+    public static function register() {
+        // See: https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
+        return [
+            'labels' => [
+                'name'          => 'Notícies',
+                'singular_name' => 'Notícia',
+            ],
+            'supports'       => ['title', 'editor', 'thumbnail', 'revisions'],
+            'taxonomies'     => ['category', 'post_tag'],
+            'rewrite'        => ['slug' => 'noticies'],
+            'public'         => true,
+            'has_archive'    => true,
+            'menu_position'  => 4,
+        ];
+    }
+
+    protected static function define_custom_fields($container) {
+        $container->add_fields([
+        ]);
+    }
+}

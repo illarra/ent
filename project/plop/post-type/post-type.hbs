@@ -1,0 +1,29 @@
+<?php
+namespace Ent\CPT;
+
+use Carbon_Fields\Field;
+use Ent\CarbonFields\Field as EntField;
+
+class {{ properSnakeCase name }} extends \Ent\CPT {
+    public static $enable_vc = {{ phpBool enable_vc }};
+
+    public static function register() {
+        // See: https://codex.wordpress.org/Function_Reference/register_post_type#Arguments
+        return [
+            'labels' => [
+                'name'          => '{{{ ucFirst plural }}}',
+                'singular_name' => '{{{ ucFirst singular }}}',
+            ],
+            'supports'       => {{{ phpArray supports }}},
+            'taxonomies'     => ['category', 'post_tag'],
+            'rewrite'        => ['slug' => '{{ slug plural }}'],
+            'public'         => true,
+            'has_archive'    => true,
+        ];
+    }
+
+    protected static function define_custom_fields($container) {
+        $container->add_fields([
+        ]);
+    }
+}
