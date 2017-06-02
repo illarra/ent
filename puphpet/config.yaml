@@ -271,7 +271,7 @@ nodejs:
         - yarn
         - gulp-cli
         - brunch
-        - plop
+        - plop@1.8.0
 mariadb:
     install: '1'
     settings:
