@@ -1,0 +1,27 @@
+<?php
+use \Ent\VisualComposer\Field;
+
+class WPBakeryShortCode_{{properSnakeCase name}} extends Ent\VisualComposer\ShortCode{{#if (equals type 'container') }}sContainer{{/if}} {
+    {{#if (not (equals type 'regular'))}}
+    public static $type = '{{type}}';
+    {{/if}}
+    {{#if (equals type 'container') }}
+    public static $children = {{{phpArray relatives}}};
+    {{/if}}
+    {{#if (equals type 'child') }}
+    public static $parents = {{{phpArray relatives}}};
+    {{/if}}
+    {{#if (not (equals type 'child'))}}
+    public static $is_layout = {{phpBool is_layout}};
+    {{/if}}
+
+    protected function get_context_data(array $fields) {
+        return [
+        ];
+    }
+
+    public static function get_fields() {
+        return [
+        ];
+    }
+}

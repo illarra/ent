@@ -1,4 +1,10 @@
-let validate = require('./plop/validate');
+const validate = require('./plop/validate');
+const utils = require('./plop/utils');
+const path = require('path');
+const componentPaths = [
+    ['Theme components:', path.resolve('./wordpress/app/themes/ent/src/components')],
+    ['Ent components:',   path.resolve('./wordpress/app/themes/ent/ent/VisualComposer/components')],
+];
 
 module.exports = function (plop) {
     // Load helpers
@@ -6,8 +12,82 @@ module.exports = function (plop) {
 
     plop.setGenerator('component', {
         description: 'VisualComposer (VC) component',
-        prompts: [],
-        actions: [],
+        prompts: [{
+            type: 'input',
+            name: 'name',
+            message: 'Name:',
+            validate: validate(['required', 'Name is required.']),
+        }, {
+            type: 'list',
+            name: 'type',
+            message: 'Select component type:',
+            choices: [
+                { name: 'Regular',            value: 'regular' },
+                { name: 'Container (parent)', value: 'container' },
+                { name: 'Container (child)',  value: 'child' },
+            ]
+        }, {
+            type: 'confirm',
+            name: 'is_layout',
+            message: 'Is a layout component? (top level row component)',
+            default: true,
+            when: function (answers) {
+                return answers.type !== 'child';
+            }
+        }, {
+            type: 'checkbox',
+            name: 'relatives',
+            choices: utils.getComponents(componentPaths, plop.inquirer),
+            message: function (answers) {
+                if (answers.type == 'container') {
+                    return 'Select allowed child components:';
+                } else {
+                    return 'Select allowed parent components:';
+                }
+            },
+            when: function (answers) {
+                return answers.type !== 'regular';
+            }
+        }],
+        actions: [{
+            type: 'add',
+            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/admin.html',
+            templateFile: 'plop/component/admin.hbs'
+        }, {
+            type: 'add',
+            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/component.php',
+            templateFile: 'plop/component/component.hbs'
+        }, {
+            type: 'add',
+            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/style.scss',
+            templateFile: 'plop/component/style.hbs'
+        }, {
+            type: 'add',
+            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/template.twig',
+            templateFile: 'plop/component/template.hbs'
+        }, {
+            type: 'append',
+            path: 'wordpress/app/themes/ent/src/scss/_components.scss',
+            template: "@import '../components/{{ dashCase name }}/style';",
+            sort: true,
+            append: function (fileData, answers, config, plop) {
+                let name = plop.renderString('components/{{ dashCase name }}/style', answers);
+
+                return !(new RegExp(name, 'gi')).test(fileData);
+            }
+        }, {
+            type: 'message',
+            message: function (answers) {
+                switch (answers.type) {
+                    case 'regular':
+                        return '';
+                    case 'container':
+                        return 'Remember to update child components $parents array';
+                    case 'child':
+                        return 'Remember to update parent components $children array';
+                }
+            }
+        }]
     });
 
     /*
@@ -19,7 +99,7 @@ module.exports = function (plop) {
     */
 
     plop.setGenerator('post-type', {
-        description: 'WordPress post type',
+        description: 'WordPress custom post type',
         prompts: [{
             type: 'input',
             name: 'name',
@@ -47,11 +127,11 @@ module.exports = function (plop) {
             // Avaliable supports: 'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', and 'post-formats'
             // Default supports: 'title', 'editor'
             choices: [
-                { name: 'title',     checked: true },
-                { name: 'editor',    checked: true },
-                { name: 'thumbnail', checked: false },
-                { name: 'excerpt',   checked: false },
-                { name: 'revisions', checked: false },
+                { name: 'Title',          value: 'title',     checked: true },
+                { name: 'Content',        value: 'editor',    checked: true },
+                { name: 'Featured image', value: 'thumbnail', checked: false },
+                { name: 'Excerpt',        value: 'excerpt',   checked: false },
+                { name: 'Revisions',      value: 'revisions', checked: false },
             ]
         }],
         actions: [{
@@ -69,6 +149,12 @@ module.exports = function (plop) {
             path: 'wordpress/app/themes/ent/src/post-types/news.php',
             templateFile: 'plop/post-type-news/news.hbs'
         }]
+    });
+
+    plop.setGenerator('taxonomy', {
+        description: 'WordPress taxonomy term.',
+        prompts: [],
+        actions: [],
     });
 
     plop.setGenerator('widget', {

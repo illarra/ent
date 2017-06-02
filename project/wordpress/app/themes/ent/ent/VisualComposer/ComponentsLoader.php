@@ -64,6 +64,32 @@ class ComponentsLoader {
                 'params'        => [],
             ];
 
+            // Set container children
+            if ($class::$type == 'container') {
+                $config['js_view'] = 'VcColumnView';
+
+                if (count($class::$children) == 0) {
+                    $class::$children = [''];
+                }
+
+                $config['as_parent'] = ['only' => implode(',', array_map(function ($component) {
+                    return str_replace('-', '_', $component);
+                }, $class::$children))];
+            }
+
+            // Set child parents
+            if ($class::$type == 'child') {
+                $class::$is_layout = false;
+
+                if (count($class::$parents) == 0) {
+                    $class::$parents = [''];
+                }
+
+                $config['as_child'] = ['only' => implode(',', array_map(function ($component) {
+                    return str_replace('-', '_', $component);
+                }, $class::$parents))];
+            }
+
             // Save to layout components array
             // This is used by vc_column to limit which components can be its child
             if ($class::$is_layout) {

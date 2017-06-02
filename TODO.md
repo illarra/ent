@@ -1,6 +1,12 @@
 # Appodera't
 
 ## Ent library
+
+- [ ] Component container no funciona (!)
+- [ ] Sacar y documentar el montaje Blog/News
+- [ ] Component => admin.html => admin.twig
+    - https://bitbucket.org/apostrof/kalendae-web/src/39d15d54b406c8a7cb16ee2cb4de04545b9c60b5/wp-content/themes/kalendae-web/src/components/index-product.php?at=master&fileviewer=file-view-default
+
 ### Templates, macros & hooks (twig)
 - [ ] Timber twig `|resize` no funciona…
 - [/] `mobile_menu`
@@ -12,6 +18,9 @@
     - Con via @xyz (twitter)
 - [ ] Check si soil esta funcionando bien
 
+## Infraestructura/Tooling
+- [ ] `plop taxonomy`
+
 -------
 -------
 -------
@@ -20,6 +29,9 @@
 # Orizar
 
 ## Ent library
+
+- Documentar rutas
+
 ### Templates, macros & hooks (twig)
 - [ ] Archive:
     - Title de content: primero calcular el string, guardarlo (set), y despues añadir un bloque con el html
@@ -51,9 +63,7 @@
     - [ ] text
 
 ## Infraestructura/Tooling
-- [ ] `plop component`:
-    - Generar carpeta y archivos, registrar .scss.
-    - Que pregunte si es tipo: normal, container-parent o container-child.
+- [ ] `plop route`
 - [ ] `plop component-tpl`
     - generar `twig` y `admin.html`. Detectar el listado de parametros, basandonos en el tipo de cada parametro generar el código que toca (imagen, link, texto…). Molaria que tambien mire `get_context_data` para por lo menos saber que otras variables hay. Si es plural `resources` que genere un `{% for %}`
     - tener en cuenta si es tipo container o no en base a eso `.row.small-up-1...` + admin.html con `<container/>`,
