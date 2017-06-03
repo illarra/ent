@@ -1,4 +1,5 @@
 var path = require('path');
+var browserTarget = ['> 1%', 'last 2 versions', 'Firefox ESR', 'Safari >= 8'];
 var paths = {
     theme: 'wordpress/app/themes/ent',
     src:   'wordpress/app/themes/ent/src',
@@ -47,6 +48,15 @@ module.exports = {
             srcBasePath: 'wordpress/app/themes/ent/assets/',
             destBasePath: 'wordpress/app/themes/ent',
         },
+        babel: {
+            presets: [
+                ['env', {
+                    targets: {
+                        browsers: browserTarget
+                    }
+                }]
+            ]
+        },
         copycat: {
             fonts: ['node_modules/font-awesome/fonts'],
         },
@@ -61,7 +71,7 @@ module.exports = {
         },
         postcss: {
             processors: [
-                require('autoprefixer')(['> 1%', 'last 2 versions', 'Firefox ESR', 'Safari >= 8']),
+                require('autoprefixer')(browserTarget),
                 require('csswring'),
             ]
         },

@@ -12,6 +12,8 @@
     "build": "rm -rf ./wordpress/app/themes/ent/assets && brunch build --production"
   },
   "dependencies": {
+    "babel-brunch": "^6.1.1",
+    "babel-preset-env": "^1.5.1",
     "font-awesome": "4.x",
     "foundation-sites": "6.3.x",
     "jquery": "3.x",
@@ -30,7 +32,7 @@
     "fingerprint-brunch": "^1.2.5",
     "inquirer-recursive": "^0.0.5",
     "javascript-brunch": "^2.0.0",
-    "sass-brunch": "^2.6.3",
+    "sass-brunch": "jukebox017/sass-brunch",
     "slug": "^0.9.1",
     "uglify-js-brunch": "^2.10.0"
   }
