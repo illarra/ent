@@ -3,7 +3,7 @@ namespace Ent\VisualComposer;
 
 use Ent\VisualComposer\Traits\RenderComponent;
 
-class ShortCodesContainer extends \WPBakeryShortCode {
+class ShortCodesContainer extends \WPBakeryShortCodesContainer {
     use RenderComponent;
 
     public static $type = 'container';

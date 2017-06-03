@@ -1,6 +1,10 @@
 {{#if (equals type 'container')}}
-{{ titleCase name }}:
+<!-- Uhmm... actually this doesn't do anything for 'container' types -->
 <container/>
 {{else}}
-<box>{{ titleCase name }}</box>
+<row>
+    <column>
+        <box>{{ titleCase name }}</box>
+    </column>
+</row>
 {{/if}}

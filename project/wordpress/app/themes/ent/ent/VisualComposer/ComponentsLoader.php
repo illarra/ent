@@ -26,7 +26,7 @@ class ComponentsLoader {
                 '</column-3>'  => '</div>',
                 '<box>'        => '<div class="ent-user-component"><span>',
                 '</box>'       => '</span></div>',
-                '<container/>' => '<div class="ent-container wpb_column_container vc_container_for_children vc_clearfix ui-droppable ui-sortable"></div>',
+                '<container/>' => '<div class="ent-container wpb_column_container vc_container_for_children vc_clearfix ui-sortable ui-droppable vc_empty-container"></div>',
             ]);
 
             return '<div data-ent-custom-view>' . $markup . '</div>';
@@ -66,7 +66,9 @@ class ComponentsLoader {
 
             // Set container children
             if ($class::$type == 'container') {
+                $config['is_container'] = true;
                 $config['js_view'] = 'VcColumnView';
+                unset($config['custom_markup']);
 
                 if (count($class::$children) == 0) {
                     $class::$children = [''];
