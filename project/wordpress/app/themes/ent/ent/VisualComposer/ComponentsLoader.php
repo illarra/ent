@@ -103,6 +103,11 @@ class ComponentsLoader {
                 $config['params'][] = $field->get_parameters();
             }
 
+            // Hide settings popup if there are no parameters
+            if (count($config['params']) == 0) {
+                $config['show_settings_on_create'] = false;
+            }
+
             // Register component
             vc_lean_map($config['base'], function () use ($config) {
                 return $config;
