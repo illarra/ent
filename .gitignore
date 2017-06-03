@@ -13,6 +13,9 @@ project/wordpress/app/plugins/*
 project/wordpress/app/upgrade
 project/wordpress/app/uploads/cache
 
+# Theme
+project/wordpress/app/themes/ent/assets
+
 # Wordpress
 project/wordpress/wp
 project/wordpress/wp/wp-snapshots
