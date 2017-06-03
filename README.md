@@ -1,13 +1,30 @@
 # l'Apòstrof Wordpress
 
-- [Iniciar proyecto](#markdown-header-iniciar-proyecto)
+- [Retomar proyecto](#markdown-header-retomar-proyecto-de-cliente-fork)
+- [Iniciar proyecto](#markdown-header-iniciar-proyecto-de-cliente-desde-apostrof-wordpress-primer-fork)
 - [Desarrollo](#markdown-header-desarrollo)
     - [_Style Guide_](#markdown-header-style-guide)
     - [Cambiar header](#markdown-header-cambiar-header)
 
 ---
 
-## Iniciar proyecto
+## Retomar proyecto de cliente (fork)
+
+**Quieres continuar con un proyecto? Puede que lo tengas que cargar desde casa, pero ahora ya desde el repositorio del proyecto del cliente… sigue estos pasos. Btw, no hagas horas extras en casa.**
+
+Facil y para toda la familia:
+
+- Crear maquina virtual: `$ vagrant up`
+- Actualiza `/etc/hosts` con el dominio e IP que sale en `puphpet/config.yaml` 
+- Entrar en la maquina: `$ vagrant ssh`
+    - `$ composer intall`
+    - `$ db-import`
+- En tu maquina, carpeta `project`:
+    - `$ yarn install`
+
+## Iniciar proyecto de cliente desde `apostrof/wordpress` (primer fork)
+
+**Sigue este apartado para la primera vez que tengas que poner el proyecto en marcha: hacer fork, cambiar configuración… Esto se hace solo una vez por cliente/proyecto.**
 
 ### Fork del repositorio
 
@@ -55,6 +72,7 @@ nginx:
 - Entrar en la maquina virtual: `$ vagrant ssh`
     - Ir a la carpeta `project` (`$ proj`) y ejecutar: `$ composer install`
 - En tu maquina, en la carpeta `project`:
+    - Actualizar `brunch-config.js` valor de `module.exports.plugins.browserSync.proxy`
     - Instalar dependencias frontend: `$ yarn install`
 
 ### Poner WordPress en marcha
