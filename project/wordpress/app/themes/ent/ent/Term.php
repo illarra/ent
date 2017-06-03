@@ -15,7 +15,10 @@ abstract class Term extends \Timber\Term {
     public function __construct($tid = null, $tax = '') {
         parent::__construct($tid, $tax);
         self::init_carbon_fields();
-        $this->load_container_values();
+
+        if (self::$container) {
+            $this->load_container_values();
+        }
     }
 
     protected static function get_cf_container($id, $label) {

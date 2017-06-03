@@ -15,7 +15,10 @@ abstract class CPT extends \Timber\Post {
     public function __construct($tid = null) {
         parent::__construct($tid);
         self::init_carbon_fields();
-        $this->load_container_values();
+
+        if (self::$container) {
+            $this->load_container_values();
+        }
     }
 
     protected static function get_cf_container($id, $label) {
