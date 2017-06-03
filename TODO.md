@@ -1,11 +1,11 @@
 # Appodera't
 
 ## Ent library
-
 - [ ] Component container no funciona (!)
-- [ ] Sacar y documentar el montaje Blog/News
+- [ ] Sacar y documentar el montaje Blog/News
 - [ ] Component => admin.html => admin.twig
     - https://bitbucket.org/apostrof/kalendae-web/src/39d15d54b406c8a7cb16ee2cb4de04545b9c60b5/wp-content/themes/kalendae-web/src/components/index-product.php?at=master&fileviewer=file-view-default
+- [ ] Actualizar a Node 8 tanto maquina virtual como dependencias (ej. `sass-brunch` no funciona en Node 8)
 
 ### Templates, macros & hooks (twig)
 - [ ] Timber twig `|resize` no funciona…
