@@ -11,6 +11,7 @@ class Field {
         'select'    => 'dropdown',
         'text'      => 'textfield',
         'textarea'  => 'textarea',
+        'link'      => 'vc_link',
     ];
 
     public static function make($type, $name, $label) {
