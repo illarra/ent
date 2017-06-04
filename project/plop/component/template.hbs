@@ -1,11 +1,11 @@
 {{#if is_layout }}
 <section class="{{ dashCase name }}">
     <div class="row column">
-        {{#if (equals type 'container')}}{{{ concat "{{ function('do_shortcode', content) }}" }}}{{/if}}
+        {{#if (equals type 'container')}}{{{ concat "{{ content|shortcodes }}" }}}{{/if}}
     </div>
 </section>
 {{else}}
 <div class="{{ dashCase name }}">
-    {{#if (equals type 'container')}}{{{ concat "{{ function('do_shortcode', content) }}" }}}{{/if}}
+    {{#if (equals type 'container')}}{{{ concat "{{ content|shortcodes }}" }}}{{/if}}
 </div>
 {{/if}}
