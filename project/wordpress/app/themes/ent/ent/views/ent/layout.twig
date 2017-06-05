@@ -1,40 +1,46 @@
 {% extends 'ent/base.twig' %}
 
 {% block body %}
-    <header>
-        {% block header %}
-            {% block header_large %}{% endblock %}
-            {% block header_mobile %}
-                <div class="header-mobile" data-header-mobile data-fixed="small medium">
-                    <div class="row">
-                        <div class="small-12 columns header-mobile__content">
-                            <a class="logo" href="{{ site.link }}" title="{{ site.name }}">{{ site.name }}</a>
-                            <a class="header-mobile__hamburger" data-hamburger="fa fa-fw fa-bars,fa fa-fw fa-times">
-                                <i data-hamburger-icon class="fa fa-fw fa-bars"></i>
-                            </a>
+    {% block header_wrapper %}
+        <header>
+            {% block header %}
+                {% block header_large %}{% endblock %}
+                {% block header_mobile %}
+                    <div class="header-mobile" data-header-mobile data-fixed="small medium">
+                        <div class="row">
+                            <div class="small-12 columns header-mobile__content">
+                                <a class="logo" href="{{ site.link }}" title="{{ site.name }}">{{ site.name }}</a>
+                                <a class="header-mobile__hamburger" data-hamburger="fa fa-fw fa-bars,fa fa-fw fa-times">
+                                    <i data-hamburger-icon class="fa fa-fw fa-bars"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endblock %}
             {% endblock %}
-        {% endblock %}
-    </header>
-    {% block mobile_menu %}
-        <nav class="mobile-menu" data-mobile-menu>
-            <div class="mobile-menu__content">
-                <div class="row align-center">
-                    <div class="small-11 medium-6 columns">
-                        <div class="mobile-menu__card">
-                            {% block mobile_menu_content %}{% endblock %}
+        </header>
+        {% block mobile_menu %}
+            <nav class="mobile-menu" data-mobile-menu>
+                <div class="mobile-menu__content">
+                    <div class="row align-center">
+                        <div class="small-11 medium-6 columns">
+                            <div class="mobile-menu__card">
+                                {% block mobile_menu_content %}{% endblock %}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        {% endblock %}
     {% endblock %}
-    <main>
-        {% block main %}{% endblock %}
-    </main>
-    <footer>
-        {% block footer %}{% endblock %}
-    </footer>
+    {% block main_wrapper %}
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    {% endblock %}
+    {% block footer_wrapper %}
+        <footer>
+            {% block footer %}{% endblock %}
+        </footer>
+    {% endblock %}
 {% endblock %}
