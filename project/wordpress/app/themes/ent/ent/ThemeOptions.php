@@ -32,10 +32,10 @@ class ThemeOptions {
             return carbon_get_theme_option($name, $type);
         });
 
-        add_filter('get_twig', function ($twig) use ($options) {
-            $twig->addGlobal('options', $options);
+        add_filter('timber/context', function ($data) use ($options) {
+            $data['_options'] = $options;
 
-            return $twig;
+            return $data;
         });
     }
 
