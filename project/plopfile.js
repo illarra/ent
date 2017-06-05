@@ -51,16 +51,16 @@ module.exports = function (plop) {
         }],
         actions: [{
             type: 'add',
+            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/_style.scss',
+            templateFile: 'plop/component/_style.hbs'
+        }, {
+            type: 'add',
             path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/admin.html',
             templateFile: 'plop/component/admin.hbs'
         }, {
             type: 'add',
             path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/component.php',
             templateFile: 'plop/component/component.hbs'
-        }, {
-            type: 'add',
-            path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/style.scss',
-            templateFile: 'plop/component/style.hbs'
         }, {
             type: 'add',
             path: 'wordpress/app/themes/ent/src/components/{{ dashCase name }}/template.twig',
