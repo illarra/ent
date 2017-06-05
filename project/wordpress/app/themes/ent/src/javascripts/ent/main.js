@@ -9,6 +9,7 @@ $(function () {
 
     // Load Ent modules
     require('./fixed.js');
+    require('./hypher.js');
     require('./mobile-menu.js');
     require('./media.js');
     require('./unorphan.js');
