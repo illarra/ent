@@ -14,6 +14,7 @@
   "dependencies": {
     "font-awesome": "4.x",
     "foundation-sites": "6.3.x",
+    "hypher": "0.x",
     "jquery": "3.x",
     "magnific-popup": "1.x",
     "slick-carousel": "1.x",
