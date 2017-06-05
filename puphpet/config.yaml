@@ -195,6 +195,7 @@ php:
         php:
             - cli
             - intl
+            - imagick
             - xml
             - mbstring
             - yaml

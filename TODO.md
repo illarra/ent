@@ -8,7 +8,6 @@
 - [ ] Actualizar a Node 8 tanto maquina virtual como dependencias (ej. `sass-brunch` no funciona en Node 8)
 
 ### Templates, macros & hooks (twig)
-- [ ] Timber twig `|resize` no funciona…
 - [/] `mobile_menu`
 
 ### Misc
