@@ -65,6 +65,7 @@ nginx:
 - Asegurate de que tienes `vagrant` y `virtualbox` instalados
     - Check: `$ brew cask list`
     - Install: `$ brew cask install vagrant virtualbox`
+        - **Problemas con VirtualBox? Prueba con la versión `5.0.26`.**
 - Crear maquina: `$ vagrant up`
 
 ### Instalar dependencias
