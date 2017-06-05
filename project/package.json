@@ -12,8 +12,6 @@
     "build": "rm -rf ./wordpress/app/themes/ent/assets && brunch build --production"
   },
   "dependencies": {
-    "babel-brunch": "^6.1.1",
-    "babel-preset-env": "^1.5.1",
     "font-awesome": "4.x",
     "foundation-sites": "6.3.x",
     "jquery": "3.x",
@@ -23,6 +21,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
+    "babel-brunch": "^6.1.1",
+    "babel-preset-env": "^1.5.1",
     "browser-sync-brunch": "^0.0.9",
     "brunch": "^2.0.0",
     "change-case": "^3.0.1",
