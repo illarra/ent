@@ -10,6 +10,7 @@ module.exports = {
         public: path.join(paths.theme, '/assets'),
         watched: [
             path.join(paths.src, '/assets'),
+            path.join(paths.src, '/components'),
             path.join(paths.src, '/javascripts'),
             path.join(paths.src, '/scss'),
         ],
