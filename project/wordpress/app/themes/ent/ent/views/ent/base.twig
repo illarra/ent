@@ -24,9 +24,11 @@
 </head>
 <body class="{% block body_class %}{% endblock %}">
     {% block body %}{% endblock %}
-    <script src="{{ asset('vendors.js') }}"></script>
-    <script src="{{ asset('main.js') }}"></script>
-    <script>require('main.js');</script>
+    {% block javascript %}
+        <script src="{{ asset('vendors.js') }}"></script>
+        <script src="{{ asset('main.js') }}"></script>
+        <script>require('main.js');</script>
+    {% endblock %}
     {{ wp_footer }}
     {#
     {% if google_maps_api_key %}
