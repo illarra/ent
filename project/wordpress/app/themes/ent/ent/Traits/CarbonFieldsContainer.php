@@ -2,7 +2,7 @@
 namespace Ent\Traits;
 
 trait CarbonFieldsContainer {
-    public $field = [];
+    public $fields = [];
     protected static $container;
 
     abstract protected function get_cf_container($id, $label);
@@ -51,7 +51,7 @@ trait CarbonFieldsContainer {
         });
 
         foreach ($values as $key => $value) {
-            $this->field[$key] = $value;
+            $this->fields[$key] = $value;
         }
     }
 }
