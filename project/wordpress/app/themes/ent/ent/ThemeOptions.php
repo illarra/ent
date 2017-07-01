@@ -32,6 +32,15 @@ class ThemeOptions {
             return carbon_get_theme_option($name, $type);
         });
 
+        // Register Google Maps API Key on CarbonFields
+        add_action('carbon_map_api_key', function ($current_key) use ($options) {
+            if ($options['maps_api_key']) {
+                return $options['maps_api_key'];
+            } else {
+                return $current_key;
+            }
+        });
+
         add_filter('timber/context', function ($data) use ($options) {
             $data['_options'] = $options;
 
