@@ -89,6 +89,7 @@ server:
     packages:
         - vim
         - htop
+        - zip
         - unzip
 users_groups:
     install: '1'
